@@ -190,7 +190,7 @@
   /* ---------- TOOLS (LISTENING + PRONUNCIATION APP) ---------- */
   .tools{background:var(--glace);}
   .tools-grid{
-    display:grid;grid-template-columns:1fr 1fr;gap:22px;
+    display:grid;grid-template-columns:1fr 1fr 1fr;gap:22px;
   }
   .tool-panel{
     background:var(--neige);border:1px solid var(--linha);border-radius:10px;
@@ -307,6 +307,39 @@
   footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
   footer a:hover{color:#fff;}
 
+  /* ---------- PLANS GRID (extra passes) ---------- */
+  .plans-grid{
+    display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:26px;
+  }
+  .plan-card{
+    background:var(--neige);color:var(--ardoise);
+    border-radius:10px;
+    box-shadow:0 20px 46px rgba(0,0,0,0.3);
+    position:relative;overflow:hidden;
+    display:flex;flex-direction:column;
+  }
+  .plan-card .notch{background:var(--ardoise);}
+  .plan-top{padding:28px 28px 20px;border-bottom:1px dashed var(--linha);}
+  .plan-badge{
+    font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.1em;
+    text-transform:uppercase;color:var(--rouge-dark);font-weight:700;
+    display:inline-flex;align-items:center;gap:8px;margin-bottom:12px;
+    background:rgba(232,17,45,0.08);padding:5px 10px;border-radius:20px;
+  }
+  .plan-top h3{font-family:'Anton',sans-serif;text-transform:uppercase;font-size:21px;letter-spacing:0.01em;margin-bottom:8px;}
+  .plan-top p{font-size:14px;line-height:1.6;color:var(--argent);}
+  .plan-list{list-style:none;display:flex;flex-direction:column;gap:9px;padding:22px 28px;flex:1;}
+  .plan-list li{display:flex;align-items:flex-start;gap:10px;font-size:13.5px;color:var(--ardoise);line-height:1.5;}
+  .plan-list li svg{width:15px;height:15px;flex:none;margin-top:3px;color:var(--rouge);}
+  .plan-bottom{
+    background:var(--ardoise);color:var(--neige);
+    padding:22px 28px;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;
+  }
+  .plan-bottom .price-label{font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:0.08em;text-transform:uppercase;opacity:0.8;}
+  .plan-bottom .price{font-family:'Anton',sans-serif;font-size:26px;margin-top:4px;}
+  .plan-bottom .price small{font-size:13px;font-family:'JetBrains Mono',monospace;}
+  .plan-bottom .btn-ghost{border-color:#fff;color:#fff;padding:10px 18px;font-size:13.5px;}
+
   @media (max-width:860px){
     .hero-inner{grid-template-columns:1fr;padding-top:52px;}
     .hero-art{display:none;}
@@ -316,6 +349,7 @@
     .stat-item{border-left:none;border-top:1px solid rgba(255,255,255,0.14);padding-top:14px;}
     .stat-item:first-child{border-top:none;padding-top:0;}
     .pass{grid-template-columns:1fr;}
+    .plans-grid{grid-template-columns:1fr;}
     .contact-inner{grid-template-columns:1fr;text-align:left;}
   }
   @media (max-width:560px){
@@ -471,6 +505,16 @@
           <span class="ipa-chip">/ə/<small>about</small></span>
         </div>
       </div>
+      <div class="tool-panel">
+        <span class="tk">App exclusivo</span>
+        <h3>Simulados semanais</h3>
+        <p>Aplicativo próprio que gera um simulado completo toda semana, no formato de provas como TOEFL e exames de mestrado — para você chegar no dia da prova sem surpresas.</p>
+        <ul class="tool-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Um simulado novo toda semana, cronometrado</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Relatório de desempenho por habilidade</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Revisão comigo dos pontos que mais pesam na nota</li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
@@ -517,6 +561,52 @@
           </div>
         </div>
         <a class="btn-ghost" style="border-color:#fff;color:#fff;justify-content:center;margin-top:22px;" href="https://wa.me/5583996048347" target="_blank" rel="noopener">Garantir vaga</a>
+      </div>
+    </div>
+
+    <div class="plans-grid">
+      <div class="plan-card">
+        <div class="notch top"></div>
+        <div class="notch bottom"></div>
+        <div class="plan-top">
+          <span class="plan-badge">Add-on · Provas</span>
+          <h3>Preparação para provas</h3>
+          <p>Adicione ao pacote de conversação para treinar especificamente para o TOEFL e provas de mestrado, com simulados no formato oficial.</p>
+        </div>
+        <ul class="plan-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Simulados completos no formato TOEFL / mestrado</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Estratégias de prova para reading, listening e writing</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Correção detalhada de cada simulado</li>
+        </ul>
+        <div class="plan-bottom">
+          <div>
+            <div class="price-label">Adicional</div>
+            <div class="price">+R$50</div>
+          </div>
+          <a class="btn-ghost" href="https://wa.me/5583996048347" target="_blank" rel="noopener">Quero esse plano</a>
+        </div>
+      </div>
+
+      <div class="plan-card">
+        <div class="notch top"></div>
+        <div class="notch bottom"></div>
+        <div class="plan-top">
+          <span class="plan-badge">Plano completo</span>
+          <h3>Tutoria + planejamento de estudos</h3>
+          <p>Acompanhamento próximo com plano de estudo individual, metas semanais e tutoria dedicada — ideal para quem tem uma prova ou objetivo com prazo definido.</p>
+        </div>
+        <ul class="plan-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Plano de estudo personalizado com metas semanais</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Simulados de TOEFL e mestrado incluídos</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Acompanhamento de progresso e ajustes de rota</li>
+        </ul>
+        <div class="plan-bottom">
+          <div>
+            <div class="price-label">Pacote mensal</div>
+            <div class="price">R$150</div>
+          </div>
+          <a class="btn-ghost" href="https://wa.me/5583996048347" target="_blank" rel="noopener">Quero esse plano</a>
+        </div>
       </div>
     </div>
   </div>
