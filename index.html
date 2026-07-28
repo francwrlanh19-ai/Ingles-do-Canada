@@ -2,641 +2,660 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Inglês do Canadá — Aulas particulares de conversação</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<title>Aula 2 — Onde estou, como estou | Inglês do Canadá</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Work+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Work+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@700&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --rouge:#E8112D;
-    --rouge-dark:#B60E22;
-    --neige:#FFFFFF;
-    --glace:#EEF5FA;
-    --ardoise:#0B1F33;
-    --ardoise-2:#132C46;
-    --argent:#5B7083;
-    --linha:#CBDCE8;
-  }
-  *{box-sizing:border-box;margin:0;padding:0;}
-  html{scroll-behavior:smooth;}
-  body{
-    font-family:'Work Sans',sans-serif;
-    color:var(--ardoise);
-    background:var(--neige);
-    -webkit-font-smoothing:antialiased;
-  }
-  .display{
-    font-family:'Anton',sans-serif;
-    font-weight:400;
-    text-transform:uppercase;
-    letter-spacing:0.01em;
-    line-height:0.95;
-  }
-  .mono{
-    font-family:'JetBrains Mono',monospace;
-  }
-  a{color:inherit;text-decoration:none;}
-  img,svg{display:block;max-width:100%;}
-  .wrap{
-    max-width:1120px;
-    margin:0 auto;
-    padding:0 28px;
-  }
+:root{
+  --rouge:#E8112D; --rouge-dark:#B60E22;
+  --bg:#0B1F33; --panel:#132C46; --panel2:#1B3A5C;
+  --linha:#25486B; --text:#F2F7FB; --muted:#8FA8C0; --verde:#3DDC84;
+}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html,body{height:100%}
+body{
+  background:var(--bg);color:var(--text);
+  font-family:'Work Sans',-apple-system,sans-serif;line-height:1.5;
+  -webkit-text-size-adjust:100%;display:flex;flex-direction:column;
+}
+.display{font-family:'Anton',sans-serif;text-transform:uppercase;letter-spacing:.01em;font-weight:400}
 
-  /* ---------- NAV ---------- */
-  header.nav{
-    position:sticky;top:0;z-index:50;
-    background:rgba(255,255,255,0.9);
-    backdrop-filter:blur(8px);
-    border-bottom:1px solid var(--linha);
-  }
-  .nav-inner{
-    max-width:1120px;margin:0 auto;padding:16px 28px;
-    display:flex;align-items:center;justify-content:space-between;
-  }
-  .brand{
-    display:flex;align-items:center;gap:10px;
-    font-family:'Anton',sans-serif;
-    font-size:19px;letter-spacing:0.02em;
-    text-transform:uppercase;
-    color:var(--ardoise);
-  }
-  .brand .leaf{width:20px;height:20px;flex:none;}
-  .nav-cta{
-    background:var(--rouge);color:var(--neige);
-    padding:10px 20px;border-radius:3px;
-    font-weight:600;font-size:14px;
-    display:flex;align-items:center;gap:8px;
-    transition:background 0.15s ease, transform 0.15s ease;
-  }
-  .nav-cta:hover{background:var(--rouge-dark);transform:translateY(-1px);}
-  .nav-cta svg{width:16px;height:16px;}
+.topo{padding:12px 14px 0;max-width:820px;margin:0 auto;width:100%;flex:none}
+.tabs{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;margin-bottom:10px}
+.tab{
+  background:var(--panel);border:1px solid var(--linha);color:var(--muted);
+  border-radius:7px;padding:11px 6px;font-family:'Anton',sans-serif;
+  text-transform:uppercase;font-size:.8rem;letter-spacing:.06em;cursor:pointer;transition:.15s;
+}
+.tab.on{background:var(--rouge);border-color:var(--rouge);color:#fff}
+.voz{display:flex;align-items:center;gap:9px;margin-bottom:8px}
+.voz label{font-size:.62rem;letter-spacing:.12em;color:var(--muted);text-transform:uppercase;font-weight:700;flex:none}
+.voz select{
+  flex:1;background:var(--panel);color:var(--text);border:1px solid var(--linha);
+  border-radius:6px;padding:7px;font-family:inherit;font-size:.78rem;
+}
 
-  /* ---------- HERO ---------- */
-  .hero{
-    position:relative;
-    background:var(--glace);
-    overflow:hidden;
-    border-bottom:1px solid var(--linha);
-  }
-  .hero-inner{
-    max-width:1120px;margin:0 auto;padding:76px 28px 0;
-    display:grid;grid-template-columns:1.15fr 0.85fr;gap:40px;align-items:end;
-  }
-  .eyebrow{
-    display:inline-flex;align-items:center;gap:8px;
-    font-family:'JetBrains Mono',monospace;
-    font-size:12.5px;letter-spacing:0.14em;
-    text-transform:uppercase;color:var(--rouge-dark);
-    font-weight:700;margin-bottom:22px;
-  }
-  .eyebrow::before{
-    content:"";width:22px;height:2px;background:var(--rouge);display:block;
-  }
-  .hero h1{
-    font-size:clamp(40px,6.4vw,76px);
-    color:var(--ardoise);
-  }
-  .hero h1 .red{color:var(--rouge);}
-  .hero p.lead{
-    max-width:480px;margin-top:22px;
-    font-size:17px;line-height:1.6;color:var(--argent);
-  }
-  .hero-actions{
-    margin-top:32px;display:flex;gap:14px;flex-wrap:wrap;
-  }
-  .btn-primary{
-    background:var(--rouge);color:var(--neige);
-    padding:15px 26px;border-radius:3px;
-    font-weight:600;font-size:15px;
-    display:inline-flex;align-items:center;gap:10px;
-    box-shadow:0 6px 18px rgba(232,17,45,0.28);
-    transition:transform 0.15s ease, box-shadow 0.15s ease;
-  }
-  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 10px 22px rgba(232,17,45,0.34);}
-  .btn-primary svg{width:18px;height:18px;}
-  .btn-ghost{
-    border:1.5px solid var(--ardoise);color:var(--ardoise);
-    padding:14px 24px;border-radius:3px;
-    font-weight:600;font-size:15px;
-    display:inline-flex;align-items:center;gap:10px;
-    transition:background 0.15s ease, color 0.15s ease;
-  }
-  .btn-ghost:hover{background:var(--ardoise);color:var(--neige);}
-  .btn-ghost svg{width:17px;height:17px;}
+.pane{display:none;flex:1;min-height:0;flex-direction:column}
+.pane.on{display:flex}
 
-  .hero-art{position:relative;height:100%;min-height:320px;}
-  .hero-art svg{width:100%;height:auto;}
+.deck{flex:1;overflow:hidden;position:relative;min-height:0}
+.track{display:flex;height:100%;transition:transform .28s cubic-bezier(.4,0,.2,1)}
+.slide{min-width:100%;height:100%;overflow-y:auto;padding:16px 16px 22px;-webkit-overflow-scrolling:touch}
+.slide-in{max-width:820px;margin:0 auto}
+.tag{
+  font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.16em;
+  color:var(--rouge);text-transform:uppercase;margin-bottom:9px;display:block;
+}
+.slide h2{font-family:'Anton',sans-serif;text-transform:uppercase;font-size:1.5rem;line-height:1.05;margin-bottom:6px}
+.slide h2 span{color:var(--rouge)}
+.sub{color:var(--muted);font-size:.85rem;margin-bottom:16px}
+.toque{
+  font-size:.72rem;color:var(--muted);margin-bottom:13px;display:flex;align-items:center;gap:6px;
+}
+.toque::before{content:"↻";color:var(--rouge);font-size:.95rem}
 
-  .skyline-strip{
-    width:100%;line-height:0;margin-top:56px;
-  }
-  .skyline-strip svg{width:100%;height:auto;display:block;}
+/* ---------- CARTÃO QUE VIRA ---------- */
+.flip{perspective:900px;cursor:pointer;margin-bottom:8px}
+.flip-in{
+  display:grid;transform-style:preserve-3d;
+  transition:transform .45s cubic-bezier(.4,0,.2,1);
+}
+.flip.on .flip-in{transform:rotateY(180deg)}
+.face{
+  grid-area:1/1;backface-visibility:hidden;-webkit-backface-visibility:hidden;
+  display:flex;align-items:center;gap:11px;
+  padding:14px 15px;border-radius:10px;
+  border:1px solid var(--linha);background:var(--panel);min-height:58px;
+}
+.face.back{transform:rotateY(180deg);background:var(--panel2);border-color:var(--rouge)}
+.face .t{flex:1;font-size:1.02rem;font-weight:600;line-height:1.35}
+.face.back .t{color:#fff}
+.face .marca{
+  font-family:'JetBrains Mono',monospace;font-size:.55rem;letter-spacing:.14em;
+  color:var(--muted);flex:none;align-self:flex-start;padding-top:4px;
+}
+.face.back .marca{color:var(--rouge)}
+.mini{
+  background:var(--rouge);color:#fff;border:none;border-radius:7px;
+  padding:9px 11px;font-size:.85rem;cursor:pointer;flex:none;line-height:1;
+}
 
-  /* ---------- STRIP STAT ---------- */
-  .stat-strip{
-    background:var(--ardoise);color:var(--neige);
-  }
-  .stat-strip .wrap{
-    display:grid;grid-template-columns:repeat(3,1fr);
-    padding:22px 28px;
-  }
-  .stat-item{
-    text-align:center;padding:0 12px;
-    border-left:1px solid rgba(255,255,255,0.14);
-  }
-  .stat-item:first-child{border-left:none;}
-  .stat-item .num{
-    font-family:'JetBrains Mono',monospace;font-weight:700;
-    color:#fff;font-size:20px;
-  }
-  .stat-item .lbl{
-    font-size:12px;color:#9DB1C4;margin-top:4px;
-    text-transform:uppercase;letter-spacing:0.06em;
-  }
+/* chips que viram */
+.grade{display:grid;grid-template-columns:1fr 1fr;gap:7px}
+.grade .flip{margin:0}
+.grade .face{padding:12px;min-height:50px;justify-content:center}
+.grade .face .t{flex:none;text-align:center;font-size:.95rem}
+.grade .face .marca{display:none}
+.grade .mini{padding:6px 8px;font-size:.72rem}
 
-  /* ---------- METHOD ---------- */
-  .section{padding:86px 0;}
-  .section-head{max-width:600px;margin-bottom:52px;}
-  .kicker{
-    font-family:'JetBrains Mono',monospace;
-    font-size:12.5px;letter-spacing:0.14em;text-transform:uppercase;
-    color:var(--rouge-dark);font-weight:700;margin-bottom:14px;
-    display:flex;align-items:center;gap:8px;
-  }
-  .kicker::before{content:"";width:22px;height:2px;background:var(--rouge);}
-  .section-head h2{
-    font-size:clamp(28px,3.6vw,42px);color:var(--ardoise);
-  }
-  .method-grid{
-    display:grid;grid-template-columns:repeat(4,1fr);gap:0;
-    border-top:1px solid var(--linha);border-left:1px solid var(--linha);
-  }
-  .method-card{
-    border-right:1px solid var(--linha);border-bottom:1px solid var(--linha);
-    padding:32px 26px;position:relative;
-    transition:background 0.15s ease;
-  }
-  .method-card:hover{background:var(--glace);}
-  .method-card .mk{
-    font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--rouge);
-    font-weight:700;margin-bottom:20px;
-  }
-  .method-card .icon{width:30px;height:30px;color:var(--ardoise);margin-bottom:18px;}
-  .method-card h3{font-size:17px;margin-bottom:10px;color:var(--ardoise);}
-  .method-card p{font-size:14.5px;line-height:1.55;color:var(--argent);}
+.box{background:var(--panel);border:1px solid var(--linha);border-radius:11px;padding:13px;margin-bottom:11px}
+table{width:100%;border-collapse:collapse;font-size:.88rem}
+th,td{padding:9px 6px;text-align:left;border-bottom:1px solid var(--linha)}
+tr:last-child td{border:none}
+th{color:var(--rouge);font-size:.63rem;text-transform:uppercase;letter-spacing:.1em}
+td strong{color:#fff}
 
-  /* ---------- TOOLS (LISTENING + PRONUNCIATION APP) ---------- */
-  .tools{background:var(--glace);}
-  .tools-grid{
-    display:grid;grid-template-columns:1fr 1fr 1fr;gap:22px;
-  }
-  .tool-panel{
-    background:var(--neige);border:1px solid var(--linha);border-radius:10px;
-    padding:34px 32px;
-  }
-  .tool-panel .tk{
-    font-family:'JetBrains Mono',monospace;font-size:11.5px;letter-spacing:0.1em;
-    text-transform:uppercase;color:var(--rouge-dark);font-weight:700;
-    display:inline-flex;align-items:center;gap:8px;margin-bottom:16px;
-    background:rgba(232,17,45,0.08);padding:5px 10px;border-radius:20px;
-  }
-  .tool-panel h3{font-size:22px;color:var(--ardoise);margin-bottom:12px;font-family:'Anton',sans-serif;text-transform:uppercase;letter-spacing:0.01em;}
-  .tool-panel p{font-size:14.5px;line-height:1.65;color:var(--argent);margin-bottom:18px;}
-  .tool-list{list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:8px;}
-  .tool-list li{
-    display:flex;align-items:flex-start;gap:10px;font-size:14px;color:var(--ardoise);line-height:1.5;
-  }
-  .tool-list li svg{width:16px;height:16px;flex:none;margin-top:3px;color:var(--rouge);}
-  .ipa-row{
-    display:flex;flex-wrap:wrap;gap:8px;margin-top:20px;
-  }
-  .ipa-chip{
-    font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:700;
-    background:var(--ardoise);color:var(--neige);
-    padding:6px 11px;border-radius:6px;
-  }
-  .ipa-chip small{color:#9DB1C4;font-weight:500;margin-left:4px;}
+.aviso{background:#2A0D14;border:1px solid var(--rouge-dark);border-radius:11px;padding:13px}
+.r{padding:8px 0;border-bottom:1px solid #3A1620}
+.r:last-of-type{border:none}
+.x{color:#FF97A2;text-decoration:line-through;font-size:.92rem}
+.v{color:var(--verde);font-weight:600;font-size:.92rem}
+.regra{margin-top:12px;font-size:.86rem;color:#D5E2EE;line-height:1.7}
 
-  /* ---------- PRICING / BOARDING PASS ---------- */
-  .pricing{background:var(--ardoise);color:var(--neige);}
-  .pricing .kicker{color:#FF7A87;}
-  .pricing .kicker::before{background:var(--rouge);}
-  .pricing .section-head h2{color:var(--neige);}
-  .pricing .section-head p{color:#9DB1C4;margin-top:14px;font-size:15.5px;line-height:1.6;}
+.pergunta-grande{
+  background:var(--panel);border-left:4px solid var(--rouge);border-radius:0 10px 10px 0;
+  padding:15px;margin-bottom:9px;
+}
+.pergunta-grande .q{font-size:1.15rem;font-weight:700}
+.pergunta-grande .a{color:var(--muted);font-size:.85rem;margin-top:4px}
 
-  .pass{
-    background:var(--neige);color:var(--ardoise);
-    border-radius:10px;
-    display:grid;grid-template-columns:1fr 260px;
-    box-shadow:0 24px 60px rgba(0,0,0,0.35);
-    position:relative;
-    overflow:hidden;
-  }
-  .pass-main{padding:38px 40px;}
-  .pass-route{
-    display:flex;align-items:center;gap:18px;margin-bottom:26px;
-  }
-  .pass-route .city{
-    font-family:'Anton',sans-serif;font-size:30px;letter-spacing:0.02em;
-  }
-  .pass-route .code{
-    font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--argent);letter-spacing:0.05em;
-  }
-  .pass-route .plane{width:26px;height:26px;color:var(--rouge);flex:none;}
-  .pass-route .route-line{flex:1;height:1px;background:repeating-linear-gradient(90deg,var(--linha) 0 6px,transparent 6px 12px);position:relative;}
-  .pass-label{
-    font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.1em;
-    text-transform:uppercase;color:var(--argent);margin-bottom:6px;
-  }
-  .pass-grid{
-    display:grid;grid-template-columns:repeat(3,auto);gap:34px;margin-top:10px;
-  }
-  .pass-grid div .v{font-family:'JetBrains Mono',monospace;font-weight:700;font-size:16px;}
-  .pass-stub{
-    background:var(--rouge);color:var(--neige);
-    padding:38px 28px;
-    position:relative;
-    display:flex;flex-direction:column;justify-content:space-between;
-  }
-  .pass-stub::before{
-    content:"";position:absolute;left:0;top:0;bottom:0;width:0;
-    border-left:2px dashed rgba(255,255,255,0.55);
-  }
-  .pass-stub .price-label{
-    font-family:'JetBrains Mono',monospace;font-size:11.5px;
-    letter-spacing:0.1em;text-transform:uppercase;opacity:0.85;
-  }
-  .pass-stub .price{
-    font-family:'Anton',sans-serif;font-size:44px;line-height:1;margin-top:10px;
-  }
-  .pass-stub .price small{font-size:16px;font-family:'JetBrains Mono',monospace;}
-  .pass-stub .promo{
-    margin-top:22px;background:rgba(255,255,255,0.14);
-    border:1px solid rgba(255,255,255,0.4);
-    border-radius:4px;padding:14px 14px;
-  }
-  .pass-stub .promo .pl{font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:0.08em;text-transform:uppercase;opacity:0.85;}
-  .pass-stub .promo .pv{font-family:'Anton',sans-serif;font-size:22px;margin-top:4px;}
-  .pass-punch{
-    position:absolute;top:0;bottom:0;left:calc(100% - 260px - 12px);
-    width:0;
-  }
-  .notch{
-    position:absolute;width:22px;height:22px;background:var(--ardoise);
-    border-radius:50%;
-  }
-  .notch.top{top:-11px;}
-  .notch.bottom{bottom:-11px;}
+.capa{display:flex;flex-direction:column;justify-content:center;height:100%;min-height:340px}
+.capa h1{font-family:'Anton',sans-serif;text-transform:uppercase;font-size:2.1rem;line-height:1.02;margin-bottom:14px}
+.capa h1 span{color:var(--rouge)}
+.capa ul{list-style:none;margin-top:8px}
+.capa li{font-size:.95rem;color:#C3D4E2;padding:9px 0 9px 20px;position:relative;border-bottom:1px solid var(--linha)}
+.capa li::before{content:"→";position:absolute;left:0;color:var(--rouge)}
 
-  /* ---------- CONTACT / FOOTER ---------- */
-  .contact{background:var(--glace);}
-  .contact-inner{
-    display:grid;grid-template-columns:1fr auto;align-items:center;gap:30px;
-    padding:64px 0;
-  }
-  .contact h2{font-size:clamp(26px,3.4vw,38px);color:var(--ardoise);}
-  .contact p{color:var(--argent);margin-top:12px;font-size:15.5px;max-width:420px;}
-  .contact-links{display:flex;gap:14px;flex-wrap:wrap;}
+.nav{
+  flex:none;display:flex;align-items:center;gap:10px;
+  padding:10px 14px calc(10px + env(safe-area-inset-bottom));
+  max-width:820px;margin:0 auto;width:100%;
+  border-top:1px solid var(--linha);background:var(--bg);
+}
+.seta{
+  background:var(--panel);border:1px solid var(--linha);color:var(--text);
+  border-radius:9px;width:52px;height:44px;font-size:1.25rem;cursor:pointer;flex:none;
+}
+.seta:disabled{opacity:.3}
+.pontos{flex:1;display:flex;gap:4px;justify-content:center;flex-wrap:wrap}
+.pt-dot{width:6px;height:6px;border-radius:50%;background:var(--linha);transition:.2s}
+.pt-dot.on{background:var(--rouge);width:18px;border-radius:3px}
+.conta{font-family:'JetBrains Mono',monospace;font-size:.72rem;color:var(--muted);flex:none;min-width:44px;text-align:center}
 
-  footer{
-    background:var(--ardoise);color:#8FA4B8;
-    padding:26px 0;font-size:13px;
-  }
-  footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
-  footer a:hover{color:#fff;}
+.rolar{flex:1;overflow-y:auto;padding:14px;max-width:820px;margin:0 auto;width:100%}
+.progresso{display:flex;justify-content:space-between;background:var(--panel);
+  border:1px solid var(--linha);border-radius:9px;padding:11px 14px;font-size:.78rem;color:var(--muted)}
+.progresso b{color:var(--text);font-family:'JetBrains Mono',monospace}
+.barra{height:4px;background:var(--linha);border-radius:2px;margin-top:8px;overflow:hidden}
+.barra i{display:block;height:100%;background:var(--rouge);width:0;transition:width .3s}
 
-  /* ---------- PLANS GRID (extra passes) ---------- */
-  .plans-grid{
-    display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:26px;
-  }
-  .plan-card{
-    background:var(--neige);color:var(--ardoise);
-    border-radius:10px;
-    box-shadow:0 20px 46px rgba(0,0,0,0.3);
-    position:relative;overflow:hidden;
-    display:flex;flex-direction:column;
-  }
-  .plan-card .notch{background:var(--ardoise);}
-  .plan-top{padding:28px 28px 20px;border-bottom:1px dashed var(--linha);}
-  .plan-badge{
-    font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.1em;
-    text-transform:uppercase;color:var(--rouge-dark);font-weight:700;
-    display:inline-flex;align-items:center;gap:8px;margin-bottom:12px;
-    background:rgba(232,17,45,0.08);padding:5px 10px;border-radius:20px;
-  }
-  .plan-top h3{font-family:'Anton',sans-serif;text-transform:uppercase;font-size:21px;letter-spacing:0.01em;margin-bottom:8px;}
-  .plan-top p{font-size:14px;line-height:1.6;color:var(--argent);}
-  .plan-list{list-style:none;display:flex;flex-direction:column;gap:9px;padding:22px 28px;flex:1;}
-  .plan-list li{display:flex;align-items:flex-start;gap:10px;font-size:13.5px;color:var(--ardoise);line-height:1.5;}
-  .plan-list li svg{width:15px;height:15px;flex:none;margin-top:3px;color:var(--rouge);}
-  .plan-bottom{
-    background:var(--ardoise);color:var(--neige);
-    padding:22px 28px;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;
-  }
-  .plan-bottom .price-label{font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:0.08em;text-transform:uppercase;opacity:0.8;}
-  .plan-bottom .price{font-family:'Anton',sans-serif;font-size:26px;margin-top:4px;}
-  .plan-bottom .price small{font-size:13px;font-family:'JetBrains Mono',monospace;}
-  .plan-bottom .btn-ghost{border-color:#fff;color:#fff;padding:10px 18px;font-size:13.5px;}
+/* cartão grande do treino, também vira */
+.flip-grande{perspective:1100px;margin-top:14px}
+.flip-grande .flip-in{transition:transform .5s cubic-bezier(.4,0,.2,1)}
+.flip-grande.on .flip-in{transform:rotateY(180deg)}
+.cara{
+  grid-area:1/1;backface-visibility:hidden;-webkit-backface-visibility:hidden;
+  background:var(--panel);border:1px solid var(--linha);border-radius:14px;
+  padding:32px 18px;text-align:center;min-height:200px;
+  display:flex;flex-direction:column;justify-content:center;align-items:center;gap:13px;
+}
+.cara.tras{transform:rotateY(180deg);background:var(--panel2);border-color:var(--rouge)}
+.cq{font-family:'Anton',sans-serif;font-size:1.8rem;text-transform:uppercase;line-height:1.15}
+.cara.tras .cq{color:#fff;font-family:'Work Sans';text-transform:none;font-size:1.5rem;font-weight:700}
 
-  @media (max-width:860px){
-    .hero-inner{grid-template-columns:1fr;padding-top:52px;}
-    .hero-art{display:none;}
-    .method-grid{grid-template-columns:1fr 1fr;}
-    .tools-grid{grid-template-columns:1fr;}
-    .stat-strip .wrap{grid-template-columns:1fr;gap:14px;}
-    .stat-item{border-left:none;border-top:1px solid rgba(255,255,255,0.14);padding-top:14px;}
-    .stat-item:first-child{border-top:none;padding-top:0;}
-    .pass{grid-template-columns:1fr;}
-    .plans-grid{grid-template-columns:1fr;}
-    .contact-inner{grid-template-columns:1fr;text-align:left;}
-  }
-  @media (max-width:560px){
-    .method-grid{grid-template-columns:1fr;}
-    .pass-grid{grid-template-columns:1fr 1fr;}
-  }
+.acoes{display:flex;gap:9px;margin-top:13px}
+.b{flex:1;border:none;border-radius:8px;padding:15px 10px;cursor:pointer;
+  font-family:'Anton',sans-serif;text-transform:uppercase;font-size:.9rem;letter-spacing:.05em}
+.b-ver{background:var(--rouge);color:#fff;width:100%}
+.b-ok{background:var(--verde);color:#06301A}
+.b-no{background:var(--panel2);color:var(--text);border:1px solid var(--linha)}
+.b-som{background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.3);
+  font-family:'Work Sans';font-weight:700;font-size:.75rem;border-radius:7px;padding:9px 14px;cursor:pointer}
+.fim{text-align:center;padding:32px 14px}
+.fim .big{font-family:'Anton',sans-serif;font-size:2.3rem;color:var(--verde);line-height:1}
+.fim p{color:var(--muted);margin:11px 0 19px;font-size:.88rem}
+.crono{font-family:'Anton',sans-serif;font-size:3.3rem;text-align:center;color:var(--rouge);line-height:1}
+.crono.baixo{animation:pulsa .5s infinite}
+@keyframes pulsa{50%{opacity:.4}}
+.placar{text-align:center;color:var(--muted);font-size:.78rem;margin-bottom:14px;letter-spacing:.06em}
+.recorde{background:var(--panel);border:1px solid var(--linha);border-radius:9px;
+  padding:12px;text-align:center;font-size:.78rem;color:var(--muted);margin-bottom:13px}
+.recorde b{color:var(--rouge);font-family:'JetBrains Mono',monospace;font-size:1.1rem}
+.b-grande{width:100%;background:var(--rouge);color:#fff;border:none;border-radius:10px;
+  padding:18px;font-family:'Anton',sans-serif;font-size:1.1rem;text-transform:uppercase;
+  letter-spacing:.06em;cursor:pointer}
+.dica{font-size:.76rem;color:var(--muted);text-align:center;margin-top:13px;line-height:1.6}
+.carta-simples{
+  background:var(--panel);border:1px solid var(--linha);border-radius:14px;
+  padding:32px 18px;text-align:center;min-height:170px;margin-top:14px;
+  display:flex;align-items:center;justify-content:center;
+}
 
-  @media (prefers-reduced-motion: reduce){
-    *{transition:none !important;}
-  }
-
-  :focus-visible{outline:2.5px solid var(--rouge);outline-offset:2px;}
+@media(min-width:620px){
+  .slide h2{font-size:1.9rem}
+  .capa h1{font-size:2.8rem}
+  .cq{font-size:2.2rem}
+  .grade{grid-template-columns:1fr 1fr 1fr}
+}
 </style>
 </head>
 <body>
 
-<header class="nav">
-  <div class="nav-inner">
-    <div class="brand">
-      <svg class="leaf" viewBox="0 0 24 24" fill="none"><path d="M12 1l1.6 4.3 3.6-2.6-.6 4.4 4.4-.6-2.6 3.6L23 12l-4.3 1.6 2.6 3.6-4.4-.6.6 4.4-3.6-2.6L12 23l-1.6-4.3-3.6 2.6.6-4.4-4.4.6 2.6-3.6L1 12l4.3-1.6-2.6-3.6 4.4.6-.6-4.4 3.6 2.6L12 1z" fill="#E8112D"/></svg>
-      Inglês do Canadá
-    </div>
-    <a class="nav-cta" href="https://wa.me/5583996048347" target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.4-.1-.6.1-.2.3-.7.9-.8 1-.2.2-.3.2-.5.1-.3-.1-1.2-.4-2.2-1.4-.8-.7-1.4-1.6-1.6-1.9-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.2-.4.1-.2 0-.3 0-.5C11 9.2 10.5 8 10.3 7.5c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.3-.1-.2-.3-.2-.6-.4z"/><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.7 1.5 5.2L2 22l4.9-1.3C8.4 21.5 10.1 22 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18c-1.7 0-3.3-.5-4.7-1.3l-.3-.2-3 .8.8-2.9-.2-.3C3.7 15 3 13.5 3 12c0-5 4-9 9-9s9 4 9 9-4 9-9 9z"/></svg>
-      WhatsApp
-    </a>
+<div class="topo">
+  <div class="tabs">
+    <button class="tab on" data-p="estudar">Aula</button>
+    <button class="tab" data-p="treinar">Treinar</button>
+    <button class="tab" data-p="desafio">Desafio</button>
   </div>
-</header>
-
-<section class="hero">
-  <div class="hero-inner">
-    <div>
-      <div class="eyebrow">Aulas particulares · Foco em conversação</div>
-      <h1 class="display">Aprenda o inglês de<br>quem <span class="red">viveu no Canadá</span></h1>
-      <p class="lead">Aulas 100% dedicadas a falar sem medo — método de conversação real, prática de pronúncia e listening no seu ritmo, com quem morou e estudou em solo canadense.</p>
-      <div class="hero-actions">
-        <a class="btn-primary" href="https://wa.me/5583996048347" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.4-.1-.6.1-.2.3-.7.9-.8 1-.2.2-.3.2-.5.1-.3-.1-1.2-.4-2.2-1.4-.8-.7-1.4-1.6-1.6-1.9-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.2-.4.1-.2 0-.3 0-.5C11 9.2 10.5 8 10.3 7.5c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.3-.1-.2-.3-.2-.6-.4z"/><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.7 1.5 5.2L2 22l4.9-1.3C8.4 21.5 10.1 22 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18c-1.7 0-3.3-.5-4.7-1.3l-.3-.2-3 .8.8-2.9-.2-.3C3.7 15 3 13.5 3 12c0-5 4-9 9-9s9 4 9 9-4 9-9 9z"/></svg>
-          Marcar aula pelo WhatsApp
-        </a>
-        <a class="btn-ghost" href="https://instagram.com/francerlanrodrigues" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1"/></svg>
-          @francerlanrodrigues
-        </a>
-      </div>
-    </div>
-    <div class="hero-art">
-      <svg viewBox="0 0 380 420" xmlns="http://www.w3.org/2000/svg">
-        <polygon points="0,420 40,300 90,360 150,250 210,340 260,270 320,380 380,340 380,420" fill="#DCEAF4"/>
-        <polygon points="0,420 60,340 120,390 190,280 250,370 300,300 380,400 380,420" fill="#C7DCE8"/>
-        <g>
-          <line x1="330" y1="420" x2="330" y2="90" stroke="#0B1F33" stroke-width="4"/>
-          <ellipse cx="330" cy="80" rx="16" ry="26" fill="#0B1F33"/>
-          <line x1="300" y1="150" x2="360" y2="150" stroke="#0B1F33" stroke-width="4"/>
-          <line x1="330" y1="90" x2="300" y2="150" stroke="#0B1F33" stroke-width="4"/>
-          <line x1="330" y1="90" x2="360" y2="150" stroke="#0B1F33" stroke-width="4"/>
-          <line x1="330" y1="130" x2="360" y2="180" stroke="#0B1F33" stroke-width="3"/>
-          <line x1="330" y1="130" x2="300" y2="180" stroke="#0B1F33" stroke-width="3"/>
-        </g>
-        <path d="M180 60 L188 78 L207 71 L200 88 L215 100 L196 102 L198 122 L182 110 L166 122 L168 102 L149 100 L164 88 L157 71 L176 78 Z" fill="#E8112D" opacity="0.9"/>
-      </svg>
-    </div>
-  </div>
-
-  <div class="skyline-strip">
-    <svg viewBox="0 0 1120 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <rect width="1120" height="60" fill="#0B1F33"/>
-      <rect x="40" y="18" width="14" height="42" fill="#132C46"/>
-      <rect x="70" y="8" width="10" height="52" fill="#132C46"/>
-      <rect x="880" y="14" width="12" height="46" fill="#132C46"/>
-      <rect x="920" y="0" width="8" height="60" fill="#132C46"/>
-      <rect x="960" y="20" width="14" height="40" fill="#132C46"/>
-    </svg>
-  </div>
-</section>
-
-<div class="stat-strip">
-  <div class="wrap">
-    <div class="stat-item"><div class="num">1:1</div><div class="lbl">Aulas individuais</div></div>
-    <div class="stat-item"><div class="num">100%</div><div class="lbl">Foco em speaking</div></div>
-    <div class="stat-item"><div class="num">4x</div><div class="lbl">Aulas no pacote de lançamento</div></div>
+  <div class="voz">
+    <label>Voz</label>
+    <select id="voz"></select>
   </div>
 </div>
 
-<section class="section" id="metodo">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="kicker">Como funciona</div>
-      <h2 class="display">O método</h2>
-    </div>
-  </div>
-  <div class="wrap">
-    <div class="method-grid">
-      <div class="method-card">
-        <div class="mk">01</div>
-        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 15a3 3 0 003-3V6a3 3 0 10-6 0v6a3 3 0 003 3z"/><path d="M19 11a7 7 0 01-14 0"/><path d="M12 18v3"/></svg>
-        <h3>Conversação real</h3>
-        <p>Método 100% focado em prática de fala presencial, sem apostilas engessadas — você fala desde a primeira aula.</p>
-      </div>
-      <div class="method-card">
-        <div class="mk">02</div>
-        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 12h20M12 2c3 3.2 3 16.8 0 20M12 2c-3 3.2-3 16.8 0 20"/></svg>
-        <h3>Prática sem medo</h3>
-        <p>Aulas dinâmicas de speaking pensadas para tirar o travamento e construir confiança na conversa.</p>
-      </div>
-      <div class="method-card">
-        <div class="mk">03</div>
-        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M9 7h6M9 11h6M9 15h3"/></svg>
-        <h3>Pronunciation Builder</h3>
-        <p>Aplicativo exclusivo de treino de pronúncia para você praticar todos os dias fora da aula.</p>
-      </div>
-      <div class="method-card">
-        <div class="mk">04</div>
-        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M11 18h2"/></svg>
-        <h3>No seu ritmo</h3>
-        <p>Listening semanal montado com base no que você curte — música, filmes e séries que você já assiste.</p>
-      </div>
-    </div>
-  </div>
-</section>
+<!-- ================= AULA ================= -->
+<div class="pane on" id="p-estudar">
+  <div class="deck" id="deck">
+    <div class="track" id="track">
 
-<section class="section tools" id="ferramentas">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="kicker">Treino extra</div>
-      <h2 class="display">Listening + pronúncia, todo dia</h2>
-    </div>
-    <div class="tools-grid">
-      <div class="tool-panel">
-        <span class="tk">Listening</span>
-        <h3>Exercícios estilo TOEFL</h3>
-        <p>Sessões de listening no modelo do TOEFL iBT, com áudios em ritmo e sotaque natural para treinar compreensão sob pressão de prova — não só conversa do dia a dia.</p>
-        <ul class="tool-list">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Áudios curtos e palestras longas, como na prova real</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Questões de múltipla escolha após cada trecho</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Correção e revisão do que você errou, junto comigo</li>
+      <section class="slide"><div class="slide-in capa">
+        <h1>Onde estou,<br><span>como estou</span></h1>
+        <ul>
+          <li>Dizer em que posição você está</li>
+          <li>Dizer como você está: cansado, pronto, machucado</li>
+          <li>Dizer qual a sua faixa</li>
+          <li>Perguntar se a pessoa está bem</li>
         </ul>
-      </div>
-      <div class="tool-panel">
-        <span class="tk">App exclusivo</span>
-        <h3>Pronunciation Builder</h3>
-        <p>Meu aplicativo próprio de pronúncia, focado nas vogais que mais confundem quem fala português — com apoio do alfabeto fonético internacional (IPA) para você enxergar exatamente onde ajustar a boca.</p>
-        <ul class="tool-list">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Foco nas vogais significativas do inglês</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Transcrição em IPA de cada som treinado</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Prática diária fora do horário de aula</li>
-        </ul>
-        <div class="ipa-row">
-          <span class="ipa-chip">/iː/<small>sheep</small></span>
-          <span class="ipa-chip">/ɪ/<small>ship</small></span>
-          <span class="ipa-chip">/æ/<small>cat</small></span>
-          <span class="ipa-chip">/ʌ/<small>cup</small></span>
-          <span class="ipa-chip">/ə/<small>about</small></span>
-        </div>
-      </div>
-      <div class="tool-panel">
-        <span class="tk">App exclusivo</span>
-        <h3>Simulados semanais</h3>
-        <p>Aplicativo próprio que gera um simulado completo toda semana, no formato de provas como TOEFL e exames de mestrado — para você chegar no dia da prova sem surpresas.</p>
-        <ul class="tool-list">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Um simulado novo toda semana, cronometrado</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Relatório de desempenho por habilidade</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Revisão comigo dos pontos que mais pesam na nota</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
+      </div></section>
 
-<section class="pricing" id="valores">
-  <div class="wrap section">
-    <div class="section-head">
-      <div class="kicker">Investimento</div>
-      <h2 class="display">Seu embarque para a fluência</h2>
-      <p>Comece com o pacote de lançamento e sinta a diferença de aprender com quem já fez essa viagem.</p>
-    </div>
+      <section class="slide"><div class="slide-in">
+        <span class="tag">Aquecimento</span>
+        <h2>Diga em <span>inglês</span></h2>
+        <p class="sub">Rápido, em voz alta. Depois toque para conferir.</p>
+        <div class="grade" id="rev-corpo"></div>
+        <div style="height:9px"></div>
+        <div class="grade" id="rev-acoes"></div>
+      </div></section>
 
-    <div class="pass">
-      <div class="notch top"></div>
-      <div class="notch bottom"></div>
-      <div class="pass-main">
-        <div class="pass-route">
-          <div>
-            <div class="city">GRU</div>
-            <div class="code">São Paulo</div>
-          </div>
-          <div class="route-line"></div>
-          <svg class="plane" viewBox="0 0 24 24" fill="currentColor"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 00-3 0V9l-8 5v2l8-2.5V19l-2.5 1.5V22l4-1 4 1v-1.5L13.5 19v-5.5L21 16z"/></svg>
-          <div>
-            <div class="city">YYZ</div>
-            <div class="code">Toronto</div>
-          </div>
+      <section class="slide"><div class="slide-in">
+        <span class="tag">A estrutura</span>
+        <h2>AM · IS · <span>ARE</span></h2>
+        <p class="sub">Três formas. Uma para cada pessoa.</p>
+        <div class="box">
+          <table>
+            <tr><th>Pessoa</th><th>Usa</th><th>Como se fala</th></tr>
+            <tr><td>I</td><td><strong>am</strong></td><td>I'm</td></tr>
+            <tr><td>You / We / They</td><td><strong>are</strong></td><td>You're / We're</td></tr>
+            <tr><td>He / She / It</td><td><strong>is</strong></td><td>He's / She's</td></tr>
+          </table>
         </div>
-        <div class="pass-label">Passageiro</div>
-        <div style="font-weight:600;font-size:15px;margin-bottom:22px;">Aluno(a) — Aulas particulares de inglês</div>
-        <div class="pass-grid">
-          <div><div class="pass-label">Formato</div><div class="v">Individual</div></div>
-          <div><div class="pass-label">Foco</div><div class="v">Conversação</div></div>
-          <div><div class="pass-label">Professor</div><div class="v">F. Rodrigues</div></div>
+      </div></section>
+
+      <section class="slide"><div class="slide-in">
+        <span class="tag">Vocabulário 1 de 3</span>
+        <h2>As <span>posições</span></h2>
+        <p class="toque">Toque no cartão para virar</p>
+        <div id="v-pos"></div>
+      </div></section>
+
+      <section class="slide"><div class="slide-in">
+        <span class="tag">Vocabulário 2 de 3</span>
+        <h2>Como você <span>está</span></h2>
+        <p class="toque">Toque no cartão para virar</p>
+        <div id="v-est"></div>
+      </div></section>
+
+      <section class="slide"><div class="slide-in">
+        <span class="tag">Vocabulário 3 de 3</span>
+        <h2>Faixas e <span>lugar</span></h2>
+        <p class="toque">Toque no cartão para virar</p>
+        <div id="v-fai"></div>
+      </div></section>
+
+      <section class="slide"><div class="slide-in">
+        <span class="tag">Juntando · 1</span>
+        <h2>Onde eu <span>estou</span></h2>
+        <p class="toque">Tente montar a frase antes de virar</p>
+        <div id="e-onde"></div>
+      </div></section>
+
+      <section class="slide"><div class="slide-in">
+        <span class="tag">Juntando · 2</span>
+        <h2>Como eu <span>estou</span></h2>
+        <p class="toque">Tente montar a frase antes de virar</p>
+        <div id="e-como"></div>
+      </div></section>
+
+      <section class="slide"><div class="slide-in">
+        <span class="tag">Juntando · 3</span>
+        <h2>Qual a minha <span>faixa</span></h2>
+        <p class="toque">Tente montar a frase antes de virar</p>
+        <div id="e-quem"></div>
+      </div></section>
+
+      <section class="slide"><div class="slide-in">
+        <span class="tag">Negativo</span>
+        <h2>Só acrescente <span>NOT</span></h2>
+        <p class="toque">Tente montar a frase antes de virar</p>
+        <div id="e-neg"></div>
+      </div></section>
+
+      <section class="slide"><div class="slide-in">
+        <span class="tag">Perguntando</span>
+        <h2>Inverta a <span>ordem</span></h2>
+        <div class="box">
+          <table>
+            <tr><th>Você diz</th><th>Você pergunta</th></tr>
+            <tr><td>You are okay.</td><td><strong>Are you</strong> okay?</td></tr>
+            <tr><td>He is tired.</td><td><strong>Is he</strong> tired?</td></tr>
+            <tr><td>They are ready.</td><td><strong>Are they</strong> ready?</td></tr>
+          </table>
         </div>
-      </div>
-      <div class="pass-stub">
-        <div>
-          <div class="price-label">Aula avulsa</div>
-          <div class="price">R$30<small>/hora</small></div>
-          <div class="promo">
-            <div class="pl">Pacote de lançamento</div>
-            <div class="pv">4 aulas · R$100</div>
+      </div></section>
+
+      <section class="slide"><div class="slide-in">
+        <span class="tag">Use hoje mesmo</span>
+        <h2>As 3 do <span>tatame</span></h2>
+        <p class="toque">Toque para ver como se diz</p>
+        <div id="e-perg"></div>
+      </div></section>
+
+      <section class="slide"><div class="slide-in">
+        <span class="tag">Atenção</span>
+        <h2>O erro <span>clássico</span></h2>
+        <div class="aviso">
+          <div class="r"><span class="x">I am escape the mount.</span><br><span class="v">I escape the mount.</span></div>
+          <div class="r"><span class="x">I am tap.</span><br><span class="v">I tap.</span></div>
+          <div class="r"><span class="x">He is push my head.</span><br><span class="v">He pushes my head.</span></div>
+          <div class="regra">
+            <strong>O que eu faço</strong> → o verbo sozinho:<br><em>I escape. I tap. I push.</em><br><br>
+            <strong>Onde ou como eu estou</strong> → am / is / are:<br><em>I am tired. I am in the guard.</em>
           </div>
         </div>
-        <a class="btn-ghost" style="border-color:#fff;color:#fff;justify-content:center;margin-top:22px;" href="https://wa.me/5583996048347" target="_blank" rel="noopener">Garantir vaga</a>
-      </div>
-    </div>
+      </div></section>
 
-    <div class="plans-grid">
-      <div class="plan-card">
-        <div class="notch top"></div>
-        <div class="notch bottom"></div>
-        <div class="plan-top">
-          <span class="plan-badge">Add-on · Provas</span>
-          <h3>Preparação para provas</h3>
-          <p>Adicione ao pacote de conversação para treinar especificamente para o TOEFL e provas de mestrado, com simulados no formato oficial.</p>
-        </div>
-        <ul class="plan-list">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Simulados completos no formato TOEFL / mestrado</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Estratégias de prova para reading, listening e writing</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Correção detalhada de cada simulado</li>
-        </ul>
-        <div class="plan-bottom">
-          <div>
-            <div class="price-label">Adicional</div>
-            <div class="price">+R$50</div>
+      <section class="slide"><div class="slide-in">
+        <span class="tag">Sua vez</span>
+        <h2>Responda em voz <span>alta</span></h2>
+        <div class="pergunta-grande"><div class="q">Where are you? What position?</div><div class="a">I am...</div></div>
+        <div class="pergunta-grande"><div class="q">How are you? Tired or ready?</div><div class="a">I am...</div></div>
+        <div class="pergunta-grande"><div class="q">What belt are you?</div><div class="a">I am a...</div></div>
+        <div class="pergunta-grande"><div class="q">Is your training partner strong?</div><div class="a">Yes, he is. / No, he isn't.</div></div>
+      </div></section>
+
+      <section class="slide"><div class="slide-in">
+        <span class="tag">Para fechar</span>
+        <h2>Repita em voz <span>alta</span></h2>
+        <p class="toque">Toque para virar</p>
+        <div id="e-recap"></div>
+        <div class="dica" style="margin-top:14px">Agora vá para <strong>TREINAR</strong> e faça uma passada.</div>
+      </div></section>
+
+    </div>
+  </div>
+
+  <div class="nav">
+    <button class="seta" id="ant" onclick="ir(-1)">‹</button>
+    <div class="pontos" id="pontos"></div>
+    <span class="conta" id="conta">1/15</span>
+    <button class="seta" id="prox" onclick="ir(1)">›</button>
+  </div>
+</div>
+
+<!-- ================= TREINAR ================= -->
+<div class="pane" id="p-treinar">
+  <div class="rolar">
+    <div class="progresso">
+      <span>Dominadas: <b id="t-feito">0</b> / <b id="t-total">0</b></span>
+      <span id="t-fila"></span>
+    </div>
+    <div class="barra"><i id="t-barra"></i></div>
+
+    <div id="t-area">
+      <div class="flip-grande" id="t-flip" onclick="revelar()">
+        <div class="flip-in">
+          <div class="cara"><div class="cq" id="t-pergunta">—</div></div>
+          <div class="cara tras">
+            <div class="cq" id="t-txt"></div>
+            <button class="b-som" onclick="event.stopPropagation();falarAtual()">▶ OUVIR DE NOVO</button>
           </div>
-          <a class="btn-ghost" href="https://wa.me/5583996048347" target="_blank" rel="noopener">Quero esse plano</a>
         </div>
       </div>
+      <div class="acoes" id="t-acao-ver"><button class="b b-ver" onclick="revelar()">VER RESPOSTA</button></div>
+      <div class="acoes" id="t-acao-julgar" style="display:none">
+        <button class="b b-no" onclick="julgar(false)">ERREI</button>
+        <button class="b b-ok" onclick="julgar(true)">ACERTEI</button>
+      </div>
+      <div class="dica">Diga em voz alta <strong>antes</strong> de virar.</div>
+    </div>
 
-      <div class="plan-card">
-        <div class="notch top"></div>
-        <div class="notch bottom"></div>
-        <div class="plan-top">
-          <span class="plan-badge">Plano completo</span>
-          <h3>Tutoria + planejamento de estudos</h3>
-          <p>Acompanhamento próximo com plano de estudo individual, metas semanais e tutoria dedicada — ideal para quem tem uma prova ou objetivo com prazo definido.</p>
-        </div>
-        <ul class="plan-list">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Plano de estudo personalizado com metas semanais</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Simulados de TOEFL e mestrado incluídos</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Acompanhamento de progresso e ajustes de rota</li>
-        </ul>
-        <div class="plan-bottom">
-          <div>
-            <div class="price-label">Pacote mensal</div>
-            <div class="price">R$150</div>
-          </div>
-          <a class="btn-ghost" href="https://wa.me/5583996048347" target="_blank" rel="noopener">Quero esse plano</a>
-        </div>
+    <div id="t-fim" style="display:none">
+      <div class="fim">
+        <div class="big">FEITO</div>
+        <p>Você passou por todas as palavras. Volte amanhã.</p>
+        <button class="b-grande" onclick="iniciarTreino()">TREINAR DE NOVO</button>
       </div>
     </div>
   </div>
-</section>
+</div>
 
-<section class="contact">
-  <div class="wrap contact-inner">
-    <div>
-      <h2 class="display">Bora marcar sua primeira aula?</h2>
-      <p>Chama no WhatsApp e escolhe o melhor horário para começar a falar inglês de verdade.</p>
+<!-- ================= DESAFIO ================= -->
+<div class="pane" id="p-desafio">
+  <div class="rolar">
+    <div class="recorde">Seu recorde: <b id="d-recorde">—</b> palavras em 60s</div>
+    <div id="d-inicio">
+      <button class="b-grande" onclick="iniciarDesafio()">INICIAR · 60 SEGUNDOS</button>
+      <div class="dica">Diga em inglês em voz alta e marque se acertou.<br>Treine na véspera da aula.</div>
     </div>
-    <div class="contact-links">
-      <a class="btn-primary" href="https://wa.me/5583996048347" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.4-.1-.6.1-.2.3-.7.9-.8 1-.2.2-.3.2-.5.1-.3-.1-1.2-.4-2.2-1.4-.8-.7-1.4-1.6-1.6-1.9-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.2-.4.1-.2 0-.3 0-.5C11 9.2 10.5 8 10.3 7.5c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.3-.1-.2-.3-.2-.6-.4z"/><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.7 1.5 5.2L2 22l4.9-1.3C8.4 21.5 10.1 22 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18c-1.7 0-3.3-.5-4.7-1.3l-.3-.2-3 .8.8-2.9-.2-.3C3.7 15 3 13.5 3 12c0-5 4-9 9-9s9 4 9 9-4 9-9 9z"/></svg>
-        83 99604-8347
-      </a>
-      <a class="btn-ghost" href="https://instagram.com/francerlanrodrigues" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1"/></svg>
-        @francerlanrodrigues
-      </a>
+    <div id="d-jogo" style="display:none">
+      <div class="crono" id="d-crono">60</div>
+      <div class="placar">ACERTOS: <span id="d-pontos">0</span></div>
+      <div class="carta-simples"><div class="cq" id="d-palavra">—</div></div>
+      <div class="acoes">
+        <button class="b b-no" onclick="pontuar(false)">ERREI</button>
+        <button class="b b-ok" onclick="pontuar(true)">ACERTEI</button>
+      </div>
+    </div>
+    <div id="d-fim" style="display:none">
+      <div class="fim">
+        <div class="big" id="d-final">0</div>
+        <p id="d-msg"></p>
+        <button class="b-grande" onclick="resetDesafio()">TENTAR DE NOVO</button>
+      </div>
     </div>
   </div>
-</section>
+</div>
 
-<footer>
-  <div class="wrap">
-    <div>© 2026 Inglês do Canadá — Aulas particulares.</div>
-    <div><a href="https://wa.me/5583996048347" target="_blank" rel="noopener">WhatsApp</a> · <a href="https://instagram.com/francerlanrodrigues" target="_blank" rel="noopener">Instagram</a></div>
-  </div>
-</footer>
+<script>
+/* ============ DADOS (sempre [português, inglês]) ============ */
+const REV_CORPO=[["Pescoço","Neck"],["Ombro","Shoulder"],["Braço","Arm"],["Mão","Hand"],
+  ["Perna","Leg"],["Joelho","Knee"],["Pé","Foot"],["Quadril","Hips"],
+  ["Costas","Back"],["Cotovelo","Elbow"],["Pulso","Wrist"],["Cabeça","Head"]];
+const REV_ACOES=[["Bater","Tap"],["Puxar","Pull"],["Empurrar","Push"],["Escapar","Escape"],["Agarrar","Grab"]];
+const POS=[["Guarda","Guard"],["Guarda fechada","Closed guard"],["Meia guarda","Half guard"],
+  ["Montada","Mount"],["Cem quilos / lateral","Side control"],["As costas","The back"],
+  ["Por cima","On top"],["Por baixo","On the bottom"]];
+const EST=[["Cansado","Tired"],["Sem gás","Gassed"],["Pronto","Ready"],["Bem / tudo certo","Okay"],
+  ["Machucado","Hurt"],["Forte","Strong"],["Rápido","Fast"],["Pesado","Heavy"]];
+const FAI=[["Faixa branca","White belt"],["Faixa azul","Blue belt"],["Faixa roxa","Purple belt"],
+  ["Faixa marrom","Brown belt"],["Faixa preta","Black belt"],["O tatame","The mat"],["A academia","The gym"]];
+const ONDE=[["Eu estou na guarda.","I am in the guard."],["Eu estou por cima.","I am on top."],
+  ["Ele está na montada.","He is in the mount."],["Ela está por baixo.","She is on the bottom."],
+  ["Nós estamos no tatame.","We are on the mat."]];
+const COMO=[["Eu estou cansado.","I am tired."],["Eu estou pronto.","I am ready."],
+  ["Ele é muito forte.","He is very strong."],["Você é rápido.","You are fast."],
+  ["Eles são pesados.","They are heavy."]];
+const QUEM=[["Eu sou faixa azul.","I am a blue belt."],["Ele é faixa preta.","He is a black belt."],
+  ["Ela é faixa roxa.","She is a purple belt."],["Nós somos faixas brancas.","We are white belts."]];
+const NEG=[["Eu não estou cansado.","I'm not tired."],["Ele não é faixa preta.","He's not a black belt."],
+  ["Nós não estamos prontos.","We're not ready."]];
+const PERG=[["Você está bem?","Are you okay?"],["Está pronto?","Are you ready?"],["Está cansado?","Are you tired?"]];
+const RECAP=[["Eu estou na guarda.","I am in the guard."],["Eu estou por cima.","I am on top."],
+  ["Eu estou cansado.","I am tired."],["Eu sou faixa azul.","I am a blue belt."],["Você está bem?","Are you okay?"]];
 
+const VOCAB=[...POS,...EST,...FAI];
+const FRASES=[["Eu estou na guarda.","I am in the guard."],["Eu estou por cima.","I am on top."],
+  ["Eu estou cansado.","I am tired."],["Eu sou faixa azul.","I am a blue belt."],["Você está bem?","Are you okay?"]];
+
+const K_VOZ='idc_voz', K_REC='idc_rec_bjj02';
+
+/* ============ VOZ ============ */
+let vozes=[],vozAtual=null,destravado=false;
+const selVoz=document.getElementById('voz');
+const BOAS=['samantha','google us english','alex','daniel','karen','aaron','nicky',
+            'google uk english female','microsoft aria','microsoft jenny'];
+function nota(v){const n=v.name.toLowerCase();const i=BOAS.findIndex(g=>n.includes(g));return i<0?99:i}
+function carregarVozes(){
+  const t=window.speechSynthesis.getVoices();
+  vozes=t.filter(v=>v.lang&&v.lang.toLowerCase().startsWith('en')).sort((a,b)=>nota(a)-nota(b));
+  if(!vozes.length)return;
+  selVoz.innerHTML=vozes.map((v,i)=>`<option value="${i}">${v.name}</option>`).join('');
+  const s=localStorage.getItem(K_VOZ);
+  const i=s?vozes.findIndex(v=>v.name===s):-1;
+  const u=i>=0?i:0; selVoz.value=u; vozAtual=vozes[u];
+}
+carregarVozes();
+window.speechSynthesis.onvoiceschanged=carregarVozes;
+selVoz.addEventListener('change',e=>{
+  vozAtual=vozes[e.target.value];localStorage.setItem(K_VOZ,vozAtual.name);falar('Ready.');
+});
+function falar(t){
+  if(!destravado){window.speechSynthesis.speak(new SpeechSynthesisUtterance(''));destravado=true}
+  window.speechSynthesis.cancel();
+  const u=new SpeechSynthesisUtterance(t);
+  u.lang='en-US';u.rate=.88;
+  if(vozAtual)u.voice=vozAtual;
+  window.speechSynthesis.speak(u);
+}
+
+/* ============ ABAS ============ */
+document.querySelectorAll('.tab').forEach(b=>{
+  b.onclick=()=>{
+    document.querySelectorAll('.tab').forEach(x=>x.classList.remove('on'));
+    document.querySelectorAll('.pane').forEach(x=>x.classList.remove('on'));
+    b.classList.add('on');
+    document.getElementById('p-'+b.dataset.p).classList.add('on');
+    if(b.dataset.p==='treinar'&&!queue.length&&!terminou)iniciarTreino();
+  };
+});
+
+/* ============ CARTÕES QUE VIRAM ============ */
+function esc(s){return s.replace(/'/g,"\\'").replace(/"/g,'&quot;')}
+function cartas(arr,alvo){
+  document.getElementById(alvo).innerHTML=arr.map(([pt,en])=>`
+    <div class="flip" onclick="virar(this,'${esc(en)}')">
+      <div class="flip-in">
+        <div class="face"><span class="marca">PT</span><span class="t">${pt}</span></div>
+        <div class="face back"><span class="marca">EN</span><span class="t">${en}</span>
+          <button class="mini" onclick="event.stopPropagation();falar('${esc(en)}')">▶</button>
+        </div>
+      </div>
+    </div>`).join('');
+}
+function virar(el,texto){
+  el.classList.toggle('on');
+  if(el.classList.contains('on')) falar(texto);
+}
+
+cartas(REV_CORPO,'rev-corpo');
+cartas(REV_ACOES,'rev-acoes');
+cartas(POS,'v-pos');
+cartas(EST,'v-est');
+cartas(FAI,'v-fai');
+cartas(ONDE,'e-onde');
+cartas(COMO,'e-como');
+cartas(QUEM,'e-quem');
+cartas(NEG,'e-neg');
+cartas(PERG,'e-perg');
+cartas(RECAP,'e-recap');
+
+/* ============ SLIDES ============ */
+const track=document.getElementById('track');
+const slides=track.querySelectorAll('.slide');
+const N=slides.length;
+let atualSlide=0;
+document.getElementById('pontos').innerHTML=Array.from({length:N},(_,i)=>
+  `<span class="pt-dot${i===0?' on':''}"></span>`).join('');
+function render(){
+  track.style.transform='translateX(-'+(atualSlide*100)+'%)';
+  document.getElementById('conta').textContent=(atualSlide+1)+'/'+N;
+  document.getElementById('ant').disabled=atualSlide===0;
+  document.getElementById('prox').disabled=atualSlide===N-1;
+  document.querySelectorAll('.pt-dot').forEach((d,i)=>d.classList.toggle('on',i===atualSlide));
+  slides[atualSlide].scrollTop=0;
+}
+function ir(d){
+  const n=atualSlide+d;
+  if(n<0||n>=N)return;
+  /* desvira os cartões da página que está saindo */
+  slides[atualSlide].querySelectorAll('.flip.on').forEach(f=>f.classList.remove('on'));
+  atualSlide=n;render();
+}
+render();
+document.addEventListener('keydown',e=>{
+  if(!document.getElementById('p-estudar').classList.contains('on'))return;
+  if(e.key==='ArrowRight')ir(1);
+  if(e.key==='ArrowLeft')ir(-1);
+});
+let x0=null,y0=null;
+document.getElementById('deck').addEventListener('touchstart',e=>{
+  x0=e.touches[0].clientX;y0=e.touches[0].clientY;
+},{passive:true});
+document.getElementById('deck').addEventListener('touchend',e=>{
+  if(x0===null)return;
+  const dx=e.changedTouches[0].clientX-x0;
+  const dy=e.changedTouches[0].clientY-y0;
+  if(Math.abs(dx)>55&&Math.abs(dx)>Math.abs(dy)*1.5) ir(dx<0?1:-1);
+  x0=null;y0=null;
+},{passive:true});
+
+/* ============ TREINAR ============ */
+const BARALHO=[...VOCAB,...FRASES];
+let queue=[],feito=0,total=0,atual=null,terminou=false,virado=false;
+function embaralhar(a){const b=[...a];for(let i=b.length-1;i>0;i--){const j=Math.random()*(i+1)|0;[b[i],b[j]]=[b[j],b[i]]}return b}
+function iniciarTreino(){
+  queue=embaralhar(BARALHO);feito=0;total=BARALHO.length;terminou=false;
+  document.getElementById('t-total').textContent=total;
+  document.getElementById('t-fim').style.display='none';
+  document.getElementById('t-area').style.display='block';
+  proxima();
+}
+function proxima(){
+  if(!queue.length){
+    terminou=true;
+    document.getElementById('t-area').style.display='none';
+    document.getElementById('t-fim').style.display='block';return;
+  }
+  atual=queue[0];virado=false;
+  document.getElementById('t-flip').classList.remove('on');
+  document.getElementById('t-pergunta').textContent=atual[0];
+  document.getElementById('t-txt').textContent=atual[1];
+  document.getElementById('t-acao-ver').style.display='flex';
+  document.getElementById('t-acao-julgar').style.display='none';
+  atualizar();
+}
+function revelar(){
+  if(virado)return;
+  virado=true;
+  document.getElementById('t-flip').classList.add('on');
+  document.getElementById('t-acao-ver').style.display='none';
+  document.getElementById('t-acao-julgar').style.display='flex';
+  falar(atual[1]);
+}
+function falarAtual(){if(atual)falar(atual[1])}
+function julgar(ok){
+  queue.shift();
+  if(ok)feito++; else queue.splice(Math.min(3,queue.length),0,atual);
+  proxima();
+}
+function atualizar(){
+  document.getElementById('t-feito').textContent=feito;
+  document.getElementById('t-fila').textContent='faltam '+queue.length;
+  document.getElementById('t-barra').style.width=(feito/total*100)+'%';
+}
+
+/* ============ DESAFIO ============ */
+let dFila=[],dPontos=0,dTempo=60,dTimer=null;
+function mostrarRecorde(){
+  const r=localStorage.getItem(K_REC);
+  document.getElementById('d-recorde').textContent=r?r:'—';
+}
+mostrarRecorde();
+function iniciarDesafio(){
+  dFila=embaralhar(VOCAB);dPontos=0;dTempo=60;
+  document.getElementById('d-inicio').style.display='none';
+  document.getElementById('d-fim').style.display='none';
+  document.getElementById('d-jogo').style.display='block';
+  document.getElementById('d-pontos').textContent='0';
+  document.getElementById('d-crono').textContent='60';
+  document.getElementById('d-crono').classList.remove('baixo');
+  puxar();
+  dTimer=setInterval(()=>{
+    dTempo--;
+    document.getElementById('d-crono').textContent=dTempo;
+    if(dTempo<=10)document.getElementById('d-crono').classList.add('baixo');
+    if(dTempo<=0)fimDesafio();
+  },1000);
+}
+function puxar(){
+  if(!dFila.length)dFila=embaralhar(VOCAB);
+  document.getElementById('d-palavra').textContent=dFila.shift()[0];
+}
+function pontuar(ok){
+  if(ok){dPontos++;document.getElementById('d-pontos').textContent=dPontos}
+  puxar();
+}
+function fimDesafio(){
+  clearInterval(dTimer);
+  document.getElementById('d-jogo').style.display='none';
+  document.getElementById('d-fim').style.display='block';
+  document.getElementById('d-final').textContent=dPontos;
+  const r=parseInt(localStorage.getItem(K_REC)||'0',10);
+  const m=document.getElementById('d-msg');
+  if(dPontos>r){
+    localStorage.setItem(K_REC,dPontos);
+    m.innerHTML='<strong style="color:#3DDC84">Novo recorde!</strong><br>Anterior: '+(r||0);
+  }else{ m.textContent='Seu recorde continua sendo '+r+'.'; }
+  mostrarRecorde();
+}
+function resetDesafio(){
+  document.getElementById('d-fim').style.display='none';
+  document.getElementById('d-inicio').style.display='block';
+}
+</script>
 </body>
 </html>
