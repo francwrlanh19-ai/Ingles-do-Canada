@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
-<title>Aula 4 — Asking questions | Inglês do Canadá</title>
+<title>Aula 5 — Numbers and can | Inglês do Canadá</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Work+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@700&display=swap" rel="stylesheet">
@@ -46,93 +46,46 @@ body{background:var(--bg);color:var(--text);font-family:'Work Sans',-apple-syste
 .toque{font-size:.72rem;color:var(--muted);margin-bottom:13px;display:flex;align-items:center;gap:6px}
 .toque::before{content:"↻";color:var(--rouge);font-size:.95rem}
 
-/* ---------- QUADRO: pouco texto, para o professor falar por cima ---------- */
-.quadro{
-  background:linear-gradient(160deg,#16344F,#0E2439);
-  border:2px solid var(--rouge);border-radius:16px;
-  padding:26px 20px;margin:10px 0 14px;text-align:center;
-}
-.quadro .q-linha{
-  font-family:'Anton',sans-serif;text-transform:uppercase;
-  font-size:1.35rem;line-height:1.35;margin:10px 0;
-}
+/* QUADRO */
+.quadro{background:linear-gradient(160deg,#16344F,#0E2439);border:2px solid var(--rouge);
+  border-radius:16px;padding:24px 20px;margin:10px 0 14px;text-align:center}
+.quadro .q-linha{font-family:'Anton',sans-serif;text-transform:uppercase;
+  font-size:1.3rem;line-height:1.35;margin:8px 0}
 .quadro .q-linha b{color:var(--rouge)}
-.quadro .q-seta{color:var(--muted);font-size:1.1rem;margin:0 6px}
-.quadro .q-nota{color:var(--muted);font-size:.85rem;margin-top:16px;font-style:italic}
-.quadro hr{border:none;border-top:1px solid var(--linha);margin:16px 0}
+.quadro .q-nota{color:var(--muted);font-size:.85rem;margin-top:14px;font-style:italic}
+.quadro hr{border:none;border-top:1px solid var(--linha);margin:14px 0}
+.quadro.ambar{border-color:var(--ambar)}
+.quadro.ambar .q-linha b{color:var(--ambar)}
 
-/* ---------- ORDEM: blocos que se movem ---------- */
-.ordem{margin-bottom:14px}
-.ord-linha{display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin-bottom:10px}
-.blk{
-  background:var(--panel2);border:1px solid var(--linha);border-radius:8px;
-  padding:11px 14px;font-size:1.05rem;font-weight:700;
-}
-.blk.aux{background:var(--rouge);border-color:var(--rouge);color:#fff}
-.blk.pt{background:transparent;border-style:dashed;color:var(--muted);font-weight:500}
-.ord-meio{
-  text-align:center;color:var(--rouge);font-size:1.4rem;margin:4px 0 10px;
-  font-family:'Anton',sans-serif;
-}
-.ord-nota{font-size:.82rem;color:var(--muted);margin-top:4px;line-height:1.6}
+/* números */
+.num-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.num-flip{perspective:800px;cursor:pointer}
+.num-in{display:grid;transform-style:preserve-3d;transition:transform .45s cubic-bezier(.4,0,.2,1)}
+.num-flip.on .num-in{transform:rotateY(180deg)}
+.num-face{grid-area:1/1;backface-visibility:hidden;-webkit-backface-visibility:hidden;
+  background:var(--panel);border:1px solid var(--linha);border-radius:11px;
+  padding:16px 6px;text-align:center;min-height:74px;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px}
+.num-face.tras{transform:rotateY(180deg);background:var(--panel2);border-color:var(--rouge)}
+.num-face .dig{font-family:'Anton',sans-serif;font-size:1.8rem;line-height:1;color:var(--text)}
+.num-face.tras .dig{font-size:.95rem;color:var(--muted)}
+.num-face .pal{font-size:1rem;font-weight:700;color:#fff}
 
-/* ---------- ESCOLHA: are ou do? ---------- */
-.esc-card{
-  background:var(--panel);border:1px solid var(--linha);border-radius:12px;
-  padding:15px;margin-bottom:9px;
-}
-.esc-frase{font-size:1.1rem;font-weight:700;margin-bottom:11px}
-.esc-frase .lac{color:var(--ambar);font-weight:800}
-.esc-btns{display:flex;gap:8px}
-.esc-b{
-  flex:1;background:var(--panel2);border:1px solid var(--linha);color:var(--text);
-  border-radius:8px;padding:12px;font-family:'Anton',sans-serif;text-transform:uppercase;
-  font-size:.95rem;cursor:pointer;letter-spacing:.04em;
-}
-.esc-b.certo{background:rgba(61,220,132,.18);border-color:var(--verde);color:var(--verde)}
-.esc-b.errado{background:rgba(255,151,162,.14);border-color:#FF97A2;color:#FF97A2}
-.esc-card .porque{
-  display:none;margin-top:10px;font-size:.82rem;color:var(--muted);
-  border-left:3px solid var(--linha);padding-left:10px;line-height:1.6;
-}
-.esc-card.feito .porque{display:block}
+/* treino de escuta */
+.escuta{background:var(--panel);border:1px solid var(--linha);border-radius:14px;
+  padding:22px 16px;text-align:center;margin-bottom:12px}
+.b-ouvir{background:var(--rouge);color:#fff;border:none;border-radius:10px;
+  padding:16px 26px;font-family:'Anton',sans-serif;font-size:1rem;text-transform:uppercase;
+  letter-spacing:.06em;cursor:pointer;display:inline-flex;align-items:center;gap:9px}
+.b-ouvir svg{width:19px;height:19px}
+.escuta-ops{display:flex;gap:9px;margin-top:16px}
+.escuta-b{flex:1;background:var(--panel2);border:1px solid var(--linha);color:var(--text);
+  border-radius:9px;padding:16px 8px;font-family:'Anton',sans-serif;font-size:1.5rem;cursor:pointer}
+.escuta-b.certo{background:rgba(61,220,132,.18);border-color:var(--verde);color:var(--verde)}
+.escuta-b.errado{background:rgba(255,151,162,.14);border-color:#FF97A2;color:#FF97A2}
+.escuta-placar{font-family:'JetBrains Mono',monospace;font-size:.72rem;color:var(--muted);margin-top:12px}
 
-/* ---------- SUA VEZ: visual distinto, sem texto para o professor ler ---------- */
-.suavez-slide{
-  border:2px dashed var(--rouge);border-radius:16px;padding:20px 16px;
-  background:rgba(232,17,45,.05);
-}
-.suavez-topo{
-  font-family:'Anton',sans-serif;text-transform:uppercase;color:var(--rouge);
-  font-size:1.1rem;letter-spacing:.08em;text-align:center;margin-bottom:6px;
-}
-.suavez-nota{
-  text-align:center;color:var(--muted);font-size:.78rem;margin-bottom:18px;font-style:italic;
-}
-.pergunta-grande{
-  background:var(--panel2);border-left:4px solid var(--rouge);border-radius:0 10px 10px 0;
-  padding:16px;margin-bottom:9px;font-size:1.15rem;font-weight:700;
-  display:flex;align-items:center;gap:11px;
-}
-.pergunta-grande .pg-t{flex:1}
-
-/* ---------- CONSERTE ---------- */
-.fix{perspective:900px;cursor:pointer;margin-bottom:8px}
-.fix-in{display:grid;transform-style:preserve-3d;transition:transform .45s cubic-bezier(.4,0,.2,1)}
-.fix.on .fix-in{transform:rotateY(180deg)}
-.fix-face{
-  grid-area:1/1;backface-visibility:hidden;-webkit-backface-visibility:hidden;
-  padding:14px 15px;border-radius:10px;border:1px solid var(--linha);
-  background:var(--panel);min-height:56px;display:flex;align-items:center;gap:11px;
-}
-.fix-face .t{flex:1;font-size:1rem;font-weight:600}
-.fix-face.err{border-color:var(--rouge-dark);background:#2A0D14}
-.fix-face.err .t{color:#FF97A2}
-.fix-face.cer{transform:rotateY(180deg);border-color:var(--verde);background:rgba(61,220,132,.1)}
-.fix-face.cer .t{color:var(--verde)}
-.fix-face .marca{font-family:'JetBrains Mono',monospace;font-size:1rem;flex:none}
-
-/* ---------- cartões padrão ---------- */
+/* cartões */
 .flip{perspective:900px;cursor:pointer;margin-bottom:8px}
 .flip-in{display:grid;transform-style:preserve-3d;transition:transform .45s cubic-bezier(.4,0,.2,1)}
 .flip.on .flip-in{transform:rotateY(180deg)}
@@ -151,6 +104,45 @@ body{background:var(--bg);color:var(--text);font-family:'Work Sans',-apple-syste
   padding:8px 9px;cursor:pointer;flex:none;display:flex;align-items:center;justify-content:center}
 .som svg{width:17px;height:17px;display:block}
 .som:active{background:rgba(232,17,45,.12)}
+
+/* ESCOLHA */
+.esc-card{background:var(--panel);border:1px solid var(--linha);border-radius:12px;
+  padding:15px;margin-bottom:9px}
+.esc-frase{font-size:1.08rem;font-weight:700;margin-bottom:4px}
+.esc-frase .lac{color:var(--ambar);font-weight:800}
+.esc-dica{font-size:.76rem;color:var(--muted);font-style:italic;margin-bottom:10px}
+.esc-btns{display:grid;grid-template-columns:1fr 1fr;gap:7px}
+.esc-b{background:var(--panel2);border:1px solid var(--linha);color:var(--text);
+  border-radius:8px;padding:11px;font-family:'Anton',sans-serif;text-transform:uppercase;
+  font-size:.9rem;cursor:pointer;letter-spacing:.04em}
+.esc-b.certo{background:rgba(61,220,132,.18);border-color:var(--verde);color:var(--verde)}
+.esc-b.errado{background:rgba(255,151,162,.14);border-color:#FF97A2;color:#FF97A2}
+.esc-card .porque{display:none;margin-top:10px;font-size:.82rem;color:var(--muted);
+  border-left:3px solid var(--linha);padding-left:10px;line-height:1.6}
+.esc-card.feito .porque{display:block}
+
+/* CONSERTE */
+.fix{perspective:900px;cursor:pointer;margin-bottom:8px}
+.fix-in{display:grid;transform-style:preserve-3d;transition:transform .45s cubic-bezier(.4,0,.2,1)}
+.fix.on .fix-in{transform:rotateY(180deg)}
+.fix-face{grid-area:1/1;backface-visibility:hidden;-webkit-backface-visibility:hidden;
+  padding:14px 15px;border-radius:10px;border:1px solid var(--linha);
+  background:var(--panel);min-height:56px;display:flex;align-items:center;gap:11px}
+.fix-face .t{flex:1;font-size:1rem;font-weight:600}
+.fix-face.err{border-color:var(--rouge-dark);background:#2A0D14}
+.fix-face.err .t{color:#FF97A2}
+.fix-face.cer{transform:rotateY(180deg);border-color:var(--verde);background:rgba(61,220,132,.1)}
+.fix-face.cer .t{color:var(--verde)}
+.fix-face .marca{font-family:'JetBrains Mono',monospace;font-size:1rem;flex:none}
+
+/* SUA VEZ */
+.suavez-slide{border:2px dashed var(--rouge);border-radius:16px;padding:20px 16px;
+  background:rgba(232,17,45,.05)}
+.suavez-topo{font-family:'Anton',sans-serif;text-transform:uppercase;color:var(--rouge);
+  font-size:1.1rem;letter-spacing:.08em;text-align:center;margin-bottom:6px}
+.suavez-nota{text-align:center;color:var(--muted);font-size:.78rem;margin-bottom:18px;font-style:italic}
+.cena{background:var(--panel2);border-radius:10px;padding:13px;margin-bottom:14px;
+  font-size:.86rem;color:#C3D4E2;line-height:1.7;text-align:center}
 
 .box{background:var(--panel);border:1px solid var(--linha);border-radius:11px;padding:13px;margin-bottom:11px}
 table{width:100%;border-collapse:collapse;font-size:.88rem}
@@ -239,8 +231,9 @@ td em{color:var(--verde);font-style:normal;font-weight:700}
   .slide h2{font-size:1.9rem}
   .capa h1{font-size:2.8rem}
   .cq{font-size:2rem}
-  .quadro .q-linha{font-size:1.7rem}
-  .blk{font-size:1.15rem;padding:13px 17px}
+  .quadro .q-linha{font-size:1.6rem}
+  .num-grid{grid-template-columns:repeat(4,1fr)}
+  .esc-btns{grid-template-columns:repeat(4,1fr)}
 }
 </style>
 </head>
@@ -260,219 +253,159 @@ td em{color:var(--verde);font-style:normal;font-weight:700}
   <div class="deck" id="deck">
     <div class="track" id="track">
 
-      <!-- 1 capa -->
+      <!-- 1 -->
       <section class="slide"><div class="slide-in capa">
-        <h1>Asking<br><span>questions</span></h1>
+        <h1>Numbers<br><span>and can</span></h1>
         <ul>
-          <li>Ask what someone does</li>
-          <li>Ask what, when and where</li>
-          <li>Say what you do not do</li>
-          <li>Answer with yes and no</li>
+          <li>Say and understand numbers</li>
+          <li>Ask how much and what time</li>
+          <li>Ask if you can train</li>
+          <li>Say what you cannot do</li>
         </ul>
       </div></section>
 
-      <!-- 2 aquecimento: inglês na frente, ele diz o português -->
+      <!-- 2 aquecimento -->
       <section class="slide"><div class="slide-in">
         <span class="tag">Warm up</span>
         <h2>O que <span>significa?</span></h2>
-        <p class="toque">Diga em português, em voz alta. Depois toque</p>
-        <div id="w-verbos"></div>
-        <div style="height:10px"></div>
-        <div id="w-tobe"></div>
+        <p class="toque">Diga em português. Depois toque</p>
+        <div id="w-perg"></div>
       </div></section>
 
-      <!-- 3 QUADRO 1 -->
+      <!-- 3 números 1-12 -->
+      <section class="slide"><div class="slide-in">
+        <span class="tag">Numbers · 1</span>
+        <h2>One to <span>twelve</span></h2>
+        <p class="toque">Diga em voz alta, depois toque para conferir</p>
+        <div class="num-grid" id="n1"></div>
+      </div></section>
+
+      <!-- 4 números 13-20 -->
+      <section class="slide"><div class="slide-in">
+        <span class="tag">Numbers · 2</span>
+        <h2>Thirteen to <span>twenty</span></h2>
+        <p class="toque">Diga em voz alta, depois toque para conferir</p>
+        <div class="num-grid" id="n2"></div>
+      </div></section>
+
+      <!-- 5 QUADRO thirteen vs thirty -->
       <section class="slide"><div class="slide-in">
         <span class="tag">Quadro · 1</span>
-        <h2>Duas <span>famílias</span></h2>
-        <div class="quadro">
-          <div class="q-linha">Como você <b>está</b><span class="q-seta">→</span><b>am · is · are</b></div>
+        <h2>A <span>armadilha</span></h2>
+        <div class="quadro ambar">
+          <div class="q-linha">thir<b>TEEN</b><span style="color:var(--muted)"> · </span>13</div>
           <hr>
-          <div class="q-linha">O que você <b>faz</b><span class="q-seta">→</span><b>do · does</b></div>
-          <div class="q-nota">tired, ready, in the guard &nbsp;·&nbsp; train, roll, compete</div>
+          <div class="q-linha"><b>THIR</b>ty<span style="color:var(--muted)"> · </span>30</div>
+          <div class="q-nota">A força muda de lugar. TEEN puxa a força para o fim.</div>
         </div>
-      </div></section>
-
-      <!-- 4 ORDEM 1 -->
-      <section class="slide"><div class="slide-in">
-        <span class="tag">Ordem · 1</span>
-        <h2>O <span>are</span> pula na frente</h2>
-        <div class="ordem">
-          <div class="ord-linha">
-            <span class="blk">You</span><span class="blk aux">are</span><span class="blk">tired</span><span class="blk pt">.</span>
-          </div>
-          <div class="ord-meio">↓</div>
-          <div class="ord-linha">
-            <span class="blk aux">Are</span><span class="blk">you</span><span class="blk">tired</span><span class="blk pt">?</span>
-          </div>
-          <div class="ord-nota">A frase é a mesma. Só o <strong style="color:var(--rouge)">are</strong> mudou de lugar.</div>
-        </div>
-        <div class="box" style="margin-top:14px">
+        <div class="box">
           <table>
-            <tr><th>Você diz</th><th>Você pergunta</th></tr>
-            <tr><td>You are ready.</td><td><em>Are you ready?</em></td></tr>
-            <tr><td>He is a black belt.</td><td><em>Is he a black belt?</em></td></tr>
-            <tr><td>They are rolling.</td><td><em>Are they rolling?</em></td></tr>
-            <tr><td>She is tired.</td><td><em>Is she tired?</em></td></tr>
-            <tr><td>You are on the mat.</td><td><em>Are you on the mat?</em></td></tr>
-            <tr><td>He is winning.</td><td><em>Is he winning?</em></td></tr>
-            <tr><td>They are ready.</td><td><em>Are they ready?</em></td></tr>
+            <tr><th>Termina em teen</th><th>Termina em ty</th></tr>
+            <tr><td>thirteen</td><td><em>thirty</em></td></tr>
+            <tr><td>fourteen</td><td><em>forty</em></td></tr>
+            <tr><td>fifteen</td><td><em>fifty</em></td></tr>
+            <tr><td>sixteen</td><td><em>sixty</em></td></tr>
           </table>
         </div>
       </div></section>
 
-      <!-- 5 TREINO: frases novas, mesma estrutura -->
+      <!-- 6 dezenas -->
       <section class="slide"><div class="slide-in">
-        <span class="tag">Treino</span>
-        <h2>Frases <span>novas</span></h2>
-        <p class="sub">Você nunca viu estas frases. Mas conhece a forma.</p>
-        <p class="toque">Leia em voz alta. Toque só se precisar do português</p>
-        <div id="c-flex"></div>
+        <span class="tag">Numbers · 3</span>
+        <h2>Thirty to <span>one hundred</span></h2>
+        <p class="toque">Diga em voz alta, depois toque</p>
+        <div class="num-grid" id="n3"></div>
       </div></section>
 
-      <!-- 6 PALAVRAS NOVAS -->
+      <!-- 7 treino de escuta -->
+      <section class="slide"><div class="slide-in">
+        <span class="tag">Treino de ouvido</span>
+        <h2>Qual você <span>ouviu?</span></h2>
+        <p class="sub">Toque em ouvir e escolha. Pode ouvir de novo.</p>
+        <div class="escuta">
+          <button class="b-ouvir" onclick="tocarNumero()">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.8-1-3.3-2.5-4v8c1.5-.7 2.5-2.2 2.5-4zM14 3.2v2.1c2.9.9 5 3.5 5 6.7s-2.1 5.8-5 6.7v2.1c4-1 7-4.5 7-8.8s-3-7.8-7-8.8z"/></svg>
+            OUVIR
+          </button>
+          <div class="escuta-ops" id="escuta-ops"></div>
+          <div class="escuta-placar" id="escuta-placar">acertos: 0 de 0</div>
+        </div>
+      </div></section>
+
+      <!-- 8 palavras novas -->
       <section class="slide"><div class="slide-in">
         <span class="tag">Palavras novas</span>
-        <h2>Os <span>dias</span></h2>
-        <p class="toque">Leia em voz alta</p>
-        <div id="c-dias"></div>
-        <div class="box" style="margin-top:12px">
-          <div style="font-size:.9rem;line-height:2;color:#C3D4E2">
-            <strong style="color:var(--rouge)">on</strong> Sunday &nbsp;·&nbsp;
-            <strong style="color:var(--rouge)">on</strong> Tuesday<br>
-            <strong style="color:var(--rouge)">every</strong> Sunday &nbsp;·&nbsp;
-            <strong style="color:var(--rouge)">every</strong> day
-          </div>
-        </div>
-      </div></section>
-
-      <!-- 5 ORDEM 2 -->
-      <section class="slide"><div class="slide-in">
-        <span class="tag">Ordem · 2</span>
-        <h2>Para <span>ação</span>, entra o DO</h2>
-        <div class="ordem">
-          <div class="ord-linha">
-            <span class="blk">You</span><span class="blk">train</span><span class="blk">every day</span><span class="blk pt">.</span>
-          </div>
-          <div class="ord-meio">↓</div>
-          <div class="ord-linha">
-            <span class="blk aux">Do</span><span class="blk">you</span><span class="blk">train</span><span class="blk">every day</span><span class="blk pt">?</span>
-          </div>
-          <div class="ord-nota">Não tem <strong>are</strong> para mover. O <strong style="color:var(--rouge)">do</strong> entra na frente.</div>
-        </div>
-      </div></section>
-
-      <!-- 8 DO: só you/they/I -->
-      <section class="slide"><div class="slide-in">
-        <span class="tag">Do</span>
-        <h2>Perguntando com <span>DO</span></h2>
-        <p class="toque">Leia em voz alta. Toque só se precisar do português</p>
-        <div id="c-do"></div>
-      </div></section>
-
-      <!-- 9 QUADRO 2: com he/she vira DOES -->
-      <section class="slide"><div class="slide-in">
-        <span class="tag">Quadro · 2</span>
-        <h2>Com he e she vira <span>DOES</span></h2>
+        <h2>How much · What time · <span>How long</span></h2>
         <div class="quadro">
-          <div class="q-linha"><b>Do</b> you train?<span class="q-seta">·</span><b>Do</b> they train?</div>
+          <div class="q-linha"><b>How much</b><span style="color:var(--muted)"> · </span>quanto custa</div>
           <hr>
-          <div class="q-linha"><b>Does</b> he train?<span class="q-seta">·</span><b>Does</b> she train?</div>
-          <div class="q-nota">É a mesma pergunta. Só muda para <b>does</b> quando é ele ou ela.</div>
-        </div>
-        <div class="quadro" style="border-color:var(--ambar)">
-          <div class="q-linha" style="font-size:1.1rem">He train<b>s</b> every day</div>
-          <div style="color:var(--ambar);font-size:1.5rem;margin:2px 0">↓</div>
-          <div class="q-linha" style="font-size:1.1rem"><b>Does</b> he train every day?</div>
-          <div class="q-nota">O <b>-s</b> pula para o <b>does</b>. Só um dos dois carrega a marca.</div>
-        </div>
-        <div class="box">
-          <div style="font-size:.95rem;line-height:2;text-align:center">
-            <span style="color:#FF97A2;text-decoration:line-through">Does he trains?</span><br>
-            <span style="color:var(--verde);font-weight:700">Does he train?</span>
-          </div>
+          <div class="q-linha"><b>What time</b><span style="color:var(--muted)"> · </span>que horas</div>
+          <hr>
+          <div class="q-linha"><b>How long</b><span style="color:var(--muted)"> · </span>quanto tempo</div>
         </div>
       </div></section>
 
-      <!-- 10 DOES -->
+      <!-- 9 preço e horário -->
       <section class="slide"><div class="slide-in">
-        <span class="tag">Does</span>
-        <h2>Perguntando com <span>DOES</span></h2>
-        <p class="toque">Leia em voz alta</p>
-        <div id="c-does"></div>
+        <span class="tag">Em uso</span>
+        <h2>Price and <span>time</span></h2>
+        <p class="toque">Leia em voz alta. Toque só se precisar do português</p>
+        <div id="c-preco"></div>
       </div></section>
 
-      <!-- 8 ESCOLHA -->
-      <section class="slide"><div class="slide-in">
-        <span class="tag">O coração da aula</span>
-        <h2>ARE ou <span>DO?</span></h2>
-        <p class="sub">Decida cada uma. Não olhe o quadro.</p>
-        <div id="escolha"></div>
-      </div></section>
-
-      <!-- 12 SUA VEZ: monte a pergunta -->
+      <!-- 10 SUA VEZ -->
       <section class="slide"><div class="slide-in">
         <div class="suavez-slide">
           <div class="suavez-topo">Sua vez</div>
-          <div class="suavez-nota">Faça a pergunta em inglês, em voz alta. Depois toque.</div>
-          <div id="monte"></div>
+          <div class="suavez-nota">Pergunte para o professor. Em voz alta.</div>
+          <div id="monte1"></div>
         </div>
       </div></section>
 
-      <!-- 13 AS TRÊS PALAVRAS -->
+      <!-- 11 QUADRO can -->
       <section class="slide"><div class="slide-in">
-        <span class="tag">Palavras novas</span>
-        <h2>As três <span>palavras</span></h2>
+        <span class="tag">Quadro · 2</span>
+        <h2>CAN nunca <span>muda</span></h2>
         <div class="quadro">
-          <div class="q-linha"><b>What</b><span class="q-seta">→</span>o que</div>
-          <hr>
-          <div class="q-linha"><b>When</b><span class="q-seta">→</span>quando</div>
-          <hr>
-          <div class="q-linha"><b>Where</b><span class="q-seta">→</span>onde</div>
+          <div class="q-linha">I <b>can</b> · You <b>can</b> · He <b>can</b></div>
+          <div class="q-linha">She <b>can</b> · We <b>can</b> · They <b>can</b></div>
+          <div class="q-nota">Nunca ganha -s. Nunca pede do. Nunca pede to.</div>
         </div>
         <div class="box">
-          <div style="font-size:.85rem;color:var(--muted);line-height:1.8;text-align:center">
-            <strong style="color:var(--text)">When</strong> e <strong style="color:var(--text)">Where</strong>
-            são parecidas. When é tempo, Where é lugar.
+          <div style="font-size:.95rem;line-height:2.1;text-align:center">
+            <span style="color:#FF97A2;text-decoration:line-through">He cans train.</span>
+            &nbsp;<span style="color:var(--verde);font-weight:700">He can train.</span><br>
+            <span style="color:#FF97A2;text-decoration:line-through">I can to train.</span>
+            &nbsp;<span style="color:var(--verde);font-weight:700">I can train.</span>
           </div>
         </div>
       </div></section>
 
-      <!-- 14 ORDEM 3 -->
+      <!-- 12 can -->
       <section class="slide"><div class="slide-in">
-        <span class="tag">Ordem · 3</span>
-        <h2>A palavra abre a <span>fila</span></h2>
-        <div class="ordem">
-          <div class="ord-linha">
-            <span class="blk aux">Do</span><span class="blk">you</span><span class="blk">train</span><span class="blk pt">?</span>
-          </div>
-          <div class="ord-meio">↓</div>
-          <div class="ord-linha">
-            <span class="blk" style="background:var(--ambar);border-color:var(--ambar);color:#0B1F33">When</span><span class="blk aux">do</span><span class="blk">you</span><span class="blk">train</span><span class="blk pt">?</span>
-          </div>
-          <div class="ord-nota">A pergunta não muda. A palavra só entra na frente.</div>
-        </div>
-      </div></section>
-
-      <!-- 15 perguntas com as três -->
-      <section class="slide"><div class="slide-in">
-        <span class="tag">Em uso</span>
-        <h2>What · When · <span>Where</span></h2>
+        <span class="tag">Can</span>
+        <h2>Pedir e <span>perguntar</span></h2>
         <p class="toque">Leia em voz alta</p>
-        <div id="c-www"></div>
+        <div id="c-can"></div>
       </div></section>
 
-      <!-- 12 quando e onde -->
+      <!-- 13 cannot -->
       <section class="slide"><div class="slide-in">
-        <span class="tag">Para responder</span>
-        <h2>When and <span>where</span></h2>
-        <p class="toque">Toque só se precisar do português</p>
-        <div id="c-quando"></div>
-        <div style="height:10px"></div>
-        <div id="c-onde"></div>
+        <span class="tag">Cannot</span>
+        <h2>Dizer o seu <span>limite</span></h2>
+        <p class="sub">O que dizer quando algo dói ou você precisa parar.</p>
+        <div id="c-cannot"></div>
       </div></section>
 
-      <!-- 13 conserte + entrevista -->
+      <!-- 14 ESCOLHA -->
+      <section class="slide"><div class="slide-in">
+        <span class="tag">Decida</span>
+        <h2>CAN, DO ou <span>ARE?</span></h2>
+        <p class="sub">A dica em português diz o que você quer falar.</p>
+        <div id="escolha"></div>
+      </div></section>
+
+      <!-- 15 CONSERTE -->
       <section class="slide"><div class="slide-in">
         <span class="tag">Erros comuns</span>
         <h2><span>Conserte</span> a frase</h2>
@@ -480,12 +413,16 @@ td em{color:var(--verde);font-style:normal;font-weight:700}
         <div id="conserte"></div>
       </div></section>
 
-      <!-- 14 entrevista -->
+      <!-- 16 SUA VEZ final -->
       <section class="slide"><div class="slide-in">
         <div class="suavez-slide">
           <div class="suavez-topo">Sua vez</div>
-          <div class="suavez-nota">Entreviste o professor. Uma pergunta de cada vez.</div>
-          <div id="entrevista"></div>
+          <div class="suavez-nota">A cena completa. Uma pergunta de cada vez.</div>
+          <div class="cena">
+            Você chegou numa academia em Londres.<br>
+            Nunca treinou lá. O professor está na recepção.
+          </div>
+          <div id="monte2"></div>
         </div>
       </div></section>
 
@@ -494,7 +431,7 @@ td em{color:var(--verde);font-style:normal;font-weight:700}
   <div class="nav">
     <button class="seta" id="ant" onclick="ir(-1)">‹</button>
     <div class="pontos" id="pontos"></div>
-    <span class="conta" id="conta">1/18</span>
+    <span class="conta" id="conta">1/16</span>
     <button class="seta" id="prox" onclick="ir(1)">›</button>
   </div>
 </div>
@@ -541,7 +478,7 @@ td em{color:var(--verde);font-style:normal;font-weight:700}
     <div class="recorde">Seu recorde: <b id="d-recorde">—</b> acertos em 60s</div>
     <div id="d-inicio">
       <button class="b-grande" onclick="iniciarDesafio()">INICIAR · 60 SEGUNDOS</button>
-      <div class="dica">Complete a pergunta.<br><strong>Toque na opção certa.</strong></div>
+      <div class="dica">Números, preço, horário e o can.<br><strong>Toque na opção certa.</strong></div>
     </div>
     <div id="d-jogo" style="display:none">
       <div class="crono" id="d-crono">60</div>
@@ -559,118 +496,103 @@ td em{color:var(--verde);font-style:normal;font-weight:700}
 
 <script>
 /* ================= DADOS ================= */
-/* warm up: inglês na frente, ele diz o português */
-const W_VERBOS=[["Rolling","Rolando"],["Passing","Passando a guarda"],["Sweeping","Raspando"],
-  ["Defending","Defendendo"],["Attacking","Atacando"],["Winning","Ganhando"],
-  ["Tired","Cansado"],["Ready","Pronto"],["The mat","O tatame"]];
-const W_TOBE=[
-  ["I ____ tired.","I <b>am</b> tired."],
-  ["He ____ a black belt.","He <b>is</b> a black belt."],
-  ["We ____ on the mat.","We <b>are</b> on the mat."]
-];
-
-/* flexibilidade: estrutura conhecida, frases inéditas */
-const C_FLEX=[
-  ["Is your gym open?","Sua academia está aberta?"],
-  ["Are they from Brazil?","Eles são do Brasil?"],
-  ["Is the class hard?","A aula é difícil?"],
-  ["Are you nervous?","Você está nervoso?"],
-  ["Is your professor here?","Seu professor está aqui?"],
-  ["Are we late?","Estamos atrasados?"],
-  ["Is the mat clean?","O tatame está limpo?"],
-  ["Am I wrong?","Eu estou errado?"]
-];
-
-const C_DIAS=[
-  ["Sunday","Domingo"],["Monday","Segunda-feira"],["Tuesday","Terça-feira"],
-  ["Saturday","Sábado"],["Every day","Todo dia"],["On Sunday","No domingo"],
-  ["Every Tuesday","Toda terça"]
-];
-
-/* DO: você, eles, eu */
-const C_DO=[
+const W_PERG=[
   ["Do you train every day?","Você treina todo dia?"],
-  ["Do you compete?","Você compete?"],
-  ["Do they train on Saturday?","Eles treinam no sábado?"],
-  ["Do you train with the gi?","Você treina de kimono?"],
-  ["Yes, I do.","Sim, eu treino."],
-  ["No, I do not.","Não, eu não treino."],
-  ["I do not train on Sunday.","Eu não treino no domingo."]
-];
-
-/* DOES: ele, ela */
-const C_DOES=[
-  ["Does he train every day?","Ele treina todo dia?"],
-  ["Does she compete?","Ela compete?"],
-  ["He studies English every Tuesday.","Ele estuda inglês toda terça."],
-  ["Does he study English?","Ele estuda inglês?"],
-  ["Does your professor speak English?","Seu professor fala inglês?"],
-  ["Yes, he does.","Sim, ele estuda."],
-  ["No, she does not.","Não, ela não compete."],
-  ["He does not train on Sunday.","Ele não treina no domingo."]
-];
-
-/* sua vez: instrução em português, ele monta a pergunta */
-const MONTE=[
-  ["Pergunte se eu treino todo dia","Do you train every day?"],
-  ["Pergunte se eu estou cansado","Are you tired?"],
-  ["Pergunte se ele compete","Does he compete?"],
-  ["Pergunte se eles estão no tatame","Are they on the mat?"],
-  ["Pergunte se ela estuda inglês","Does she study English?"],
-  ["Pergunte se a aula é difícil","Is the class hard?"]
-];
-
-/* o coração: are ou do, misturado */
-const ESCOLHA=[
-  {frase:"____ you tired?",certa:"ARE",porque:"tired é como você está → are"},
-  {frase:"____ you train every day?",certa:"DO",porque:"train é uma ação → do"},
-  {frase:"____ he a black belt?",certa:"IS",porque:"black belt é o que ele é → is"},
-  {frase:"____ she compete?",certa:"DOES",porque:"compete é uma ação, e é ela → does"},
-  {frase:"____ you ready?",certa:"ARE",porque:"ready é como você está → are"},
-  {frase:"____ they train on Saturday?",certa:"DO",porque:"train é uma ação → do"},
-  {frase:"____ he winning?",certa:"IS",porque:"winning já tem o -ing, então precisa do is"},
-  {frase:"____ your professor speak English?",certa:"DOES",porque:"speak é ação, professor é ele → does"},
-  {frase:"____ your gym open on Sunday?",certa:"IS",porque:"open aqui é como a academia está → is"},
-  {frase:"____ she study English?",certa:"DOES",porque:"study é ação, e é ela → does"}
-];
-const OPS_ESC=["ARE","IS","DO","DOES"];
-
-const C_WWW=[
-  ["What do you do?","O que você faz?"],
-  ["What time is the class?","Que horas é a aula?"],
-  ["When do you train?","Quando você treina?"],
-  ["When is the competition?","Quando é a competição?"],
-  ["When does he study?","Quando ele estuda?"],
+  ["Does he compete?","Ele compete?"],
   ["Where do you train?","Onde você treina?"],
-  ["Where is the gym?","Onde fica a academia?"],
-  ["Where does she live?","Onde ela mora?"]
+  ["When is the competition?","Quando é a competição?"],
+  ["Are you tired?","Você está cansado?"],
+  ["What are you doing?","O que você está fazendo?"]
 ];
-const C_QUANDO=[
-  ["Every day","Todo dia"],["Twice a week","Duas vezes por semana"],
-  ["On Mondays","Às segundas"],["In the morning","De manhã"],
-  ["At night","À noite"],["After work","Depois do trabalho"],
-  ["Before the competition","Antes da competição"]
+
+const N1=[[1,"one"],[2,"two"],[3,"three"],[4,"four"],[5,"five"],[6,"six"],
+  [7,"seven"],[8,"eight"],[9,"nine"],[10,"ten"],[11,"eleven"],[12,"twelve"]];
+const N2=[[13,"thirteen"],[14,"fourteen"],[15,"fifteen"],[16,"sixteen"],
+  [17,"seventeen"],[18,"eighteen"],[19,"nineteen"],[20,"twenty"]];
+const N3=[[30,"thirty"],[40,"forty"],[50,"fifty"],[60,"sixty"],
+  [70,"seventy"],[80,"eighty"],[90,"ninety"],[100,"one hundred"]];
+
+/* pares que confundem, para o treino de ouvido */
+const PARES=[[13,"thirteen",30,"thirty"],[14,"fourteen",40,"forty"],
+  [15,"fifteen",50,"fifty"],[16,"sixteen",60,"sixty"],
+  [17,"seventeen",70,"seventy"],[18,"eighteen",80,"eighty"],
+  [19,"nineteen",90,"ninety"]];
+
+const C_PRECO=[
+  ["How much is it?","Quanto custa?"],
+  ["How much is the mat fee?","Quanto custa a taxa do treino?"],
+  ["It is twenty pounds.","Custa vinte libras."],
+  ["It is fifteen dollars.","Custa quinze dólares."],
+  ["What time is the class?","Que horas é a aula?"],
+  ["The class is at seven.","A aula é às sete."],
+  ["At six thirty.","Às seis e meia."],
+  ["How long is the class?","Quanto tempo dura a aula?"],
+  ["One hour.","Uma hora."],
+  ["Ninety minutes.","Noventa minutos."]
 ];
-const C_ONDE=[
-  ["At the gym","Na academia"],["Near my house","Perto da minha casa"],
-  ["In Brazil","No Brasil"],["Abroad","No exterior"],["At home","Em casa"]
+
+const C_CAN=[
+  ["Can I train here today?","Posso treinar aqui hoje?"],
+  ["Can I train with you?","Posso treinar com você?"],
+  ["Can you show me again?","Você pode me mostrar de novo?"],
+  ["Can I use the changing room?","Posso usar o vestiário?"],
+  ["Can he speak Portuguese?","Ele fala português?"],
+  ["Yes, you can.","Sim, pode."],
+  ["No, you cannot.","Não, não pode."]
 ];
+
+const C_CANNOT=[
+  ["I cannot train today.","Não posso treinar hoje."],
+  ["I cannot turn my neck.","Não consigo virar o pescoço."],
+  ["My knee hurts. I cannot roll.","Meu joelho dói. Não posso rolar."],
+  ["Can we go light today?","Podemos ir leve hoje?"],
+  ["I can drill, but I cannot spar.","Posso treinar o movimento, mas não posso lutar."]
+];
+
+const MONTE1=[
+  ["Pergunte quanto custa","How much is it?"],
+  ["Pergunte que horas é a aula","What time is the class?"],
+  ["Pergunte quanto tempo dura a aula","How long is the class?"]
+];
+const MONTE2=[
+  ["Pergunte se você pode treinar hoje","Can I train here today?"],
+  ["Pergunte quanto custa a taxa","How much is the mat fee?"],
+  ["Pergunte que horas começa","What time is the class?"],
+  ["Diga que seu joelho dói","My knee hurts."],
+  ["Diga que não pode lutar hoje","I cannot spar today."],
+  ["Pergunte se pode ir leve","Can we go light today?"]
+];
+
+const ESCOLHA=[
+  {frase:"____ I train here today?",dica:"posso? (pedindo permissão)",certa:"CAN",
+   porque:"pedir permissão é sempre can"},
+  {frase:"____ you tired?",dica:"você está cansado?",certa:"ARE",
+   porque:"tired é como você está → are"},
+  {frase:"____ you train every day?",dica:"você treina? (rotina)",certa:"DO",
+   porque:"rotina, ação → do"},
+  {frase:"____ you show me again?",dica:"você pode me mostrar?",certa:"CAN",
+   porque:"pedido é can, nunca do"},
+  {frase:"____ he a black belt?",dica:"ele é faixa preta?",certa:"IS",
+   porque:"o que ele é → is"},
+  {frase:"____ she compete?",dica:"ela compete? (rotina)",certa:"DOES",
+   porque:"rotina, ação, e é ela → does"},
+  {frase:"____ we go light today?",dica:"podemos ir leve?",certa:"CAN",
+   porque:"pedido é can"},
+  {frase:"____ they training now?",dica:"eles estão treinando agora?",certa:"ARE",
+   porque:"training tem -ing, então precisa do are"}
+];
+const OPS_ESC=["ARE","IS","DO","DOES","CAN"];
 
 const CONSERTE=[
-  ["Are you train every day?","Do you train every day?"],
-  ["Do you tired?","Are you tired?"],
-  ["Where you train?","Where do you train?"],
-  ["What you doing?","What are you doing?"],
-  ["Does he trains?","Does he train?"],
-  ["He no train on Sunday.","He does not train on Sunday."]
+  ["I can to train.","I can train."],
+  ["He cans train.","He can train."],
+  ["Do I train here today?","Can I train here today?"],
+  ["I no can train.","I cannot train."],
+  ["How much cost?","How much is it?"],
+  ["What time the class is?","What time is the class?"]
 ];
 
-const ENTREVISTA=[
-  "What do you do?","Where do you train?","When do you train?",
-  "Do you compete?","Does your professor compete?","What time is the class?"
-];
-
-const K_VOZ='idc_voz', K_REC='idc_rec_bjj04';
+const K_VOZ='idc_voz', K_REC='idc_rec_bjj05';
 const ICONE='<svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.8-1-3.3-2.5-4v8c1.5-.7 2.5-2.2 2.5-4z"/></svg>';
 
 /* ================= VOZ ================= */
@@ -691,15 +613,14 @@ carregarVozes();
 window.speechSynthesis.onvoiceschanged=carregarVozes;
 selVoz.addEventListener('change',e=>{vozAtual=vozes[e.target.value];
   localStorage.setItem(K_VOZ,vozAtual.name);falar('Ready.')});
-function falar(t){
+function falar(t,taxa){
   if(!destravado){window.speechSynthesis.speak(new SpeechSynthesisUtterance(''));destravado=true}
   window.speechSynthesis.cancel();
   const u=new SpeechSynthesisUtterance(t);
-  u.lang='en-US';u.rate=.88;if(vozAtual)u.voice=vozAtual;
+  u.lang='en-US';u.rate=taxa||.88;if(vozAtual)u.voice=vozAtual;
   window.speechSynthesis.speak(u);
 }
 function esc(s){return s.replace(/'/g,"\\'").replace(/"/g,'&quot;')}
-function limpo(s){return s.replace(/<[^>]+>/g,'')}
 
 /* ================= ABAS ================= */
 document.querySelectorAll('.tab').forEach(b=>{
@@ -713,28 +634,6 @@ document.querySelectorAll('.tab').forEach(b=>{
 });
 
 /* ================= RENDER ================= */
-function cartasPT(arr,alvo){
-  document.getElementById(alvo).innerHTML=arr.map(([pt,en])=>`
-    <div class="flip" onclick="virarPT(this,'${esc(en)}')">
-      <div class="flip-in">
-        <div class="face"><span class="marca">PT</span><span class="t">${pt}</span></div>
-        <div class="face back ing"><span class="marca">EN</span><span class="t">${en}</span>
-          <button class="som" onclick="event.stopPropagation();falar('${esc(en)}')">${ICONE}</button>
-        </div>
-      </div>
-    </div>`).join('');
-}
-function cartasLacuna(arr,alvo){
-  document.getElementById(alvo).innerHTML=arr.map(([q,a])=>`
-    <div class="flip" onclick="virarPT(this,'${esc(limpo(a))}')">
-      <div class="flip-in">
-        <div class="face"><span class="t">${q.replace('____','<span style="color:var(--ambar);font-weight:800">____</span>')}</span></div>
-        <div class="face back ing"><span class="t">${a}</span>
-          <button class="som" onclick="event.stopPropagation();falar('${esc(limpo(a))}')">${ICONE}</button>
-        </div>
-      </div>
-    </div>`).join('');
-}
 function cartasEN(arr,alvo){
   document.getElementById(alvo).innerHTML=arr.map(([en,pt])=>`
     <div class="flip" onclick="virarEN(this)">
@@ -746,19 +645,48 @@ function cartasEN(arr,alvo){
       </div>
     </div>`).join('');
 }
-function virarPT(el,t){el.classList.toggle('on');if(el.classList.contains('on'))falar(t)}
+function cartasPT(arr,alvo){
+  document.getElementById(alvo).innerHTML=arr.map(([pt,en])=>`
+    <div class="flip" onclick="virarPT(this,'${esc(en)}')">
+      <div class="flip-in">
+        <div class="face"><span class="t">${pt}</span></div>
+        <div class="face back ing"><span class="t">${en}</span>
+          <button class="som" onclick="event.stopPropagation();falar('${esc(en)}')">${ICONE}</button>
+        </div>
+      </div>
+    </div>`).join('');
+}
+function numeros(arr,alvo){
+  document.getElementById(alvo).innerHTML=arr.map(([d,p])=>`
+    <div class="num-flip" onclick="virarNum(this,'${p}')">
+      <div class="num-in">
+        <div class="num-face"><div class="dig">${d}</div></div>
+        <div class="num-face tras"><div class="pal">${p}</div><div class="dig">${d}</div></div>
+      </div>
+    </div>`).join('');
+}
 function virarEN(el){el.classList.toggle('on')}
+function virarPT(el,t){el.classList.toggle('on');if(el.classList.contains('on'))falar(t)}
+function virarNum(el,t){el.classList.toggle('on');if(el.classList.contains('on'))falar(t)}
 
-/* escolha: decide are ou do */
+cartasEN(W_PERG,'w-perg');
+numeros(N1,'n1'); numeros(N2,'n2'); numeros(N3,'n3');
+cartasEN(C_PRECO,'c-preco');
+cartasEN(C_CAN,'c-can');
+cartasEN(C_CANNOT,'c-cannot');
+cartasPT(MONTE1,'monte1');
+cartasPT(MONTE2,'monte2');
+
+/* escolha */
 document.getElementById('escolha').innerHTML=ESCOLHA.map((e,i)=>`
   <div class="esc-card" id="esc${i}">
     <div class="esc-frase">${e.frase.replace('____','<span class="lac">____</span>')}</div>
+    <div class="esc-dica">${e.dica}</div>
     <div class="esc-btns">
       ${OPS_ESC.map(o=>`<button class="esc-b" onclick="responderEsc(${i},this,'${o}')">${o}</button>`).join('')}
     </div>
     <div class="porque">${e.porque}</div>
   </div>`).join('');
-
 function responderEsc(i,btn,op){
   const card=document.getElementById('esc'+i);
   if(card.classList.contains('feito'))return;
@@ -772,7 +700,7 @@ function responderEsc(i,btn,op){
   falar(ESCOLHA[i].frase.replace('____',certa.toLowerCase()));
 }
 
-/* conserte: errado na frente, certo atrás */
+/* conserte */
 document.getElementById('conserte').innerHTML=CONSERTE.map(([err,cer])=>`
   <div class="fix" onclick="virarFix(this,'${esc(cer)}')">
     <div class="fix-in">
@@ -782,39 +710,40 @@ document.getElementById('conserte').innerHTML=CONSERTE.map(([err,cer])=>`
   </div>`).join('');
 function virarFix(el,t){el.classList.toggle('on');if(el.classList.contains('on'))falar(t)}
 
-/* entrevista */
-document.getElementById('entrevista').innerHTML=ENTREVISTA.map(q=>`
-  <div class="pergunta-grande">
-    <span class="pg-t">${q}</span>
-    <button class="som" onclick="falar('${esc(q)}')">${ICONE}</button>
-  </div>`).join('');
-
-cartasEN(W_VERBOS,'w-verbos');
-cartasLacuna(W_TOBE,'w-tobe');
-cartasEN(C_FLEX,'c-flex');
-cartasEN(C_DIAS,'c-dias');
-cartasEN(C_DO,'c-do');
-cartasEN(C_DOES,'c-does');
-cartasEN(C_WWW,'c-www');
-cartasEN(C_QUANDO,'c-quando');
-cartasEN(C_ONDE,'c-onde');
-
-/* sua vez: instrução em português na frente, pergunta em inglês atrás */
-document.getElementById('monte').innerHTML=MONTE.map(([pt,en])=>`
-  <div class="flip" onclick="virarPT(this,'${esc(en)}')">
-    <div class="flip-in">
-      <div class="face"><span class="t">${pt}</span></div>
-      <div class="face back ing"><span class="t">${en}</span>
-        <button class="som" onclick="event.stopPropagation();falar('${esc(en)}')">${ICONE}</button>
-      </div>
-    </div>
-  </div>`).join('');
+/* ================= TREINO DE OUVIDO ================= */
+let parAtual=null, ouviu=null, escAcertos=0, escTotal=0, escTravado=false;
+function novoPar(){
+  parAtual=PARES[Math.random()*PARES.length|0];
+  ouviu=Math.random()<.5?0:1;   /* 0 = teen, 1 = ty */
+  escTravado=false;
+  const [d1,p1,d2,p2]=parAtual;
+  document.getElementById('escuta-ops').innerHTML=
+    `<button class="escuta-b" onclick="responderEscuta(0,this)">${d1}</button>
+     <button class="escuta-b" onclick="responderEscuta(1,this)">${d2}</button>`;
+}
+function tocarNumero(){
+  if(!parAtual)novoPar();
+  falar(ouviu===0?parAtual[1]:parAtual[3], .8);
+}
+function responderEscuta(i,btn){
+  if(escTravado||!parAtual)return;
+  escTravado=true;escTotal++;
+  const certo=i===ouviu;
+  if(certo)escAcertos++;
+  const botoes=document.querySelectorAll('#escuta-ops .escuta-b');
+  botoes[ouviu].classList.add('certo');
+  if(!certo)btn.classList.add('errado');
+  document.getElementById('escuta-placar').textContent=
+    `acertos: ${escAcertos} de ${escTotal}`;
+  setTimeout(()=>{novoPar();},certo?700:1300);
+}
+novoPar();
 
 /* ================= SLIDES ================= */
 const track=document.getElementById('track');
 const slides=track.querySelectorAll('.slide');
 const N=slides.length;
-const SLIDES_FALA=[11,17]; /* índice 0-based dos slides "sua vez" */
+const SLIDES_FALA=[9,15];
 let atualSlide=0;
 document.getElementById('pontos').innerHTML=Array.from({length:N},(_,i)=>
   `<span class="pt-dot${i===0?' on':''}${SLIDES_FALA.includes(i)?' fala':''}"></span>`).join('');
@@ -833,6 +762,7 @@ function ir(d){
   const n=atualSlide+d;
   if(n<0||n>=N)return;
   slides[atualSlide].querySelectorAll('.flip.on').forEach(f=>f.classList.remove('on'));
+  slides[atualSlide].querySelectorAll('.num-flip.on').forEach(f=>f.classList.remove('on'));
   slides[atualSlide].querySelectorAll('.fix.on').forEach(f=>f.classList.remove('on'));
   atualSlide=n;render();
 }
@@ -853,12 +783,11 @@ document.getElementById('deck').addEventListener('touchend',e=>{
 
 /* ================= TREINAR ================= */
 const BARALHO=[
-  ...C_DO.map(([en,pt])=>[pt,en]),
-  ...C_DOES.map(([en,pt])=>[pt,en]),
-  ...C_WWW.map(([en,pt])=>[pt,en]),
-  ...C_DIAS.map(([en,pt])=>[pt,en]),
-  ...C_QUANDO.map(([en,pt])=>[pt,en]),
-  ...C_ONDE.map(([en,pt])=>[pt,en])
+  ...N2.map(([d,p])=>[String(d),p]),
+  ...N3.map(([d,p])=>[String(d),p]),
+  ...C_PRECO.map(([en,pt])=>[pt,en]),
+  ...C_CAN.map(([en,pt])=>[pt,en]),
+  ...C_CANNOT.map(([en,pt])=>[pt,en])
 ];
 let queue=[],feito=0,total=0,atual=null,terminou=false,virado=false;
 function embaralhar(a){const b=[...a];for(let i=b.length-1;i>0;i--){const j=Math.random()*(i+1)|0;[b[i],b[j]]=[b[j],b[i]]}return b}
@@ -902,19 +831,19 @@ function atualizar(){
 }
 
 /* ================= QUIZ ================= */
-const Q_AUX=ESCOLHA.map(e=>({texto:e.frase,certa:e.certa.toLowerCase(),pool:'aux',pt:e.porque}));
-const Q_WWW=[
-  {texto:"______ do you train?",certa:"When",pool:'www',pt:"quando",dica:"quando"},
-  {texto:"______ do you train?",certa:"Where",pool:'www',pt:"onde",dica:"onde"},
-  {texto:"______ do you do?",certa:"What",pool:'www',pt:"o que",dica:"o que"},
-  {texto:"______ is the competition?",certa:"When",pool:'www',pt:"quando",dica:"quando"},
-  {texto:"______ is the gym?",certa:"Where",pool:'www',pt:"onde",dica:"onde"},
-  {texto:"______ time is the class?",certa:"What",pool:'www',pt:"que horas",dica:"que horas"},
-  {texto:"______ is your professor?",certa:"Who",pool:'www',pt:"quem",dica:"quem"}
+const TODOS_NUM=[...N2,...N3];
+const Q_NUM=TODOS_NUM.map(([d,p])=>({tipo:'num',texto:String(d),certa:p,pt:String(d)}));
+const Q_AUX=ESCOLHA.map(e=>({tipo:'aux',texto:e.frase,dica:e.dica,
+  certa:e.certa.toLowerCase(),pt:e.dica}));
+const Q_WORD=[
+  {tipo:'word',texto:"______ is it?",dica:"quanto custa",certa:"How much",pt:"quanto custa"},
+  {tipo:'word',texto:"______ is the class?",dica:"que horas",certa:"What time",pt:"que horas"},
+  {tipo:'word',texto:"______ is the class?",dica:"quanto tempo dura",certa:"How long",pt:"quanto tempo"},
+  {tipo:'word',texto:"______ is the mat fee?",dica:"quanto custa",certa:"How much",pt:"quanto custa"}
 ];
-const POOL_AUX=['are','is','do','does'];
-const POOL_WWW=['What','When','Where','Who'];
-const TODOS_Q=[...Q_AUX,...Q_WWW];
+const POOL_AUX=['are','is','do','does','can'];
+const POOL_WORD=['How much','What time','How long','Where'];
+const TODOS_Q=[...Q_NUM,...Q_AUX,...Q_WORD];
 
 let dFila=[],dPontos=0,dTempo=60,dTimer=null,dAtual=null,dEstado='parado',dErros=[];
 function mostrarRecorde(){
@@ -947,7 +876,10 @@ function puxar(){
   document.getElementById('d-alvo').innerHTML=
     `<div class="d-frase">${dAtual.texto.replace(/____+/,'<span class="lac">____</span>')}</div>`+
     (dAtual.dica?`<div class="d-dica">${dAtual.dica}</div>`:'');
-  const pool=dAtual.pool==='aux'?POOL_AUX:POOL_WWW;
+  let pool;
+  if(dAtual.tipo==='num') pool=TODOS_NUM.map(x=>x[1]);
+  else if(dAtual.tipo==='aux') pool=POOL_AUX;
+  else pool=POOL_WORD;
   const distr=embaralhar(pool.filter(x=>x.toLowerCase()!==dAtual.certa.toLowerCase())).slice(0,3);
   const ops=embaralhar([dAtual.certa,...distr]);
   document.getElementById('d-opcoes').innerHTML=ops.map(o=>
@@ -963,7 +895,7 @@ function responder(btn,escolha){
   });
   if(!certo)btn.classList.add('errado');
   if(certo){dPontos++;document.getElementById('d-pontos').textContent=dPontos}
-  else if(!dErros.some(e=>e.texto===dAtual.texto))dErros.push(dAtual);
+  else if(!dErros.some(e=>e.texto===dAtual.texto&&e.certa===dAtual.certa))dErros.push(dAtual);
   setTimeout(()=>{if(dTempo<=0)return;dEstado='jogando';puxar()},certo?320:900);
 }
 function fimDesafio(){
@@ -981,7 +913,7 @@ function fimDesafio(){
   rev.innerHTML = dErros.length
     ? '<div class="revisao-tit">Revise estas '+dErros.length+'</div>'+
       dErros.map(e=>{
-        const completa=e.texto.replace(/____+/,e.certa);
+        const completa=e.tipo==='num'?e.certa:e.texto.replace(/____+/,e.certa);
         return `<div class="rev-item">
           <div class="rt"><div class="re">${completa}</div><div class="rp">${e.pt}</div></div>
           <button class="som" onclick="falar('${esc(completa)}')">${ICONE}</button>
