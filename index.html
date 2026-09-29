@@ -413,7 +413,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 /* ===== EDITE SÓ AQUI ===== */
 const CONFIG = {
   nome: "Francerlan Soares",          // como quer aparecer no topo e no rodapé
-  whatsapp: "",                // só números, com 55 e DDD. Ex.: "5511999998888"
+  whatsapp: "83 99604-8347",   // seu número com DDD, entre as aspas. Ex.: "(83) 99999-8888"
   instagram: "",               // sem o @. Ex.: "seuperfil"
   duracao: "60",               // minutos de cada aula
   mensagem: "Olá! Vi o seu site e quero saber das vagas para as aulas de inglês."
@@ -428,8 +428,10 @@ if (CONFIG.instagram) {
 } else {
   document.querySelectorAll('.js-insta').forEach(a => a.remove());
 }
-if (CONFIG.whatsapp) {
-  const link = "https://wa.me/" + CONFIG.whatsapp + "?text=" + encodeURIComponent(CONFIG.mensagem);
+let fone = String(CONFIG.whatsapp).replace(/\D/g, "");
+if (fone.length === 10 || fone.length === 11) fone = "55" + fone;
+if (fone.length >= 12) {
+  const link = "https://wa.me/" + fone + "?text=" + encodeURIComponent(CONFIG.mensagem);
   document.querySelectorAll('.js-whats').forEach(a => { a.href = link; a.target = "_blank"; a.rel = "noopener"; });
 }
 </script>
